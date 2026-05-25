@@ -44,6 +44,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { supabase } from '@/lib/supabase.js'
+import { fallbackServices } from '@/lib/contentFallbacks.js'
 import AppSlider from '@/components/ui/AppSlider.vue'
 import LoadingSpinner from '@/components/ui/LoadingSpinner.vue'
 
@@ -81,9 +82,10 @@ onMounted(async () => {
       .select('id, name, slug, short_description, icon_key, badge, featured')
       .order('display_order')
     if (err) throw err
-    services.value = data || []
+    services.value = (data && data.length) ? data : fallbackServices
   } catch {
-    error.value = true
+    services.value = fallbackServices
+    error.value = false
   } finally {
     loading.value = false
   }

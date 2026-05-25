@@ -1,6 +1,6 @@
 <template>
   <main>
-    <PageHero title="About ManAndTruck Movers" subtitle="Family-owned, community-driven, and passionate about stress-free moving." badge="Our Story"
+    <PageHero title="About ManAndTruck Movers" subtitle="Guelph-based, Ontario-wide, and passionate about stress-free moving." badge="Our Story"
       :breadcrumbs="[{to:'/',label:'Home'},{label:'About Us'}]" />
 
     <section class="py-20 bg-white">
@@ -8,10 +8,10 @@
         <div class="flex flex-col gap-6">
           <p class="text-xs uppercase tracking-[0.2em] font-heading font-semibold text-secondary">Who We Are</p>
           <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary uppercase tracking-wide leading-tight">
-            Moving Families &amp; Businesses for Over 15 Years
+            A Group Of Friends Building A Better Moving Experience
           </h2>
-          <p class="text-gray-700 leading-relaxed">ManAndTruck Movers was founded on a simple belief: moving should be a fresh start, not a nightmare. Since our first move in 2009, we've grown from a single truck to a fleet of 20+ vehicles — but we've never lost that family-business commitment to every customer.</p>
-          <p class="text-gray-700 leading-relaxed">Our team of trained, background-checked professionals treat every home and office with the respect it deserves. From the first phone call to the final piece of furniture placed, we're with you every step of the way.</p>
+          <p class="text-gray-700 leading-relaxed">ManAndTruck Movers started as a group of friends in Guelph who wanted to run a moving company differently. We saw how stressful moving can be, so we built our service around clear communication, careful handling, and showing up when we say we will.</p>
+          <p class="text-gray-700 leading-relaxed">We are still early in our journey, but our mission is simple: deliver reliable residential and small-business moves across Ontario with the kind of care you would expect from people who genuinely value your trust.</p>
           <div class="grid grid-cols-2 gap-4 mt-2">
             <div v-for="stat in stats" :key="stat.label" class="bg-light-bg rounded-xl p-5 text-center">
               <p class="font-heading font-bold text-3xl text-primary">{{ stat.val }}</p>
@@ -22,7 +22,7 @@
         <div class="rounded-2xl overflow-hidden aspect-square relative">
           <img
             src="https://images.unsplash.com/photo-1698917414969-feade59e3343?w=600&h=600&fit=crop&q=80"
-            alt="Our professional moving team"
+            alt="Founding moving team"
             class="w-full h-full object-cover"
             loading="lazy"
           />
@@ -69,19 +69,19 @@ import { onMounted } from 'vue'
 import PageHero from '@/components/ui/PageHero.vue'
 import CtaStrip from '@/components/home/CtaStrip.vue'
 
-onMounted(() => { document.title = 'About Us | ManAndTruck Movers' })
+onMounted(() => { document.title = 'About Us | ManAndTruck Movers Ontario' })
 
 const stats = [
-  { val: '15+',   label: 'Years in Business' },
-  { val: '10K+',  label: 'Happy Customers' },
-  { val: '20+',   label: 'Trucks in Fleet' },
-  { val: '4.9★', label: 'Google Rating' },
+  { val: '2026', label: 'Founded In' },
+  { val: '3',    label: 'Founding Friends' },
+  { val: '100+', label: 'Moves Completed' },
+  { val: '4.9★', label: 'Average Rating' },
 ]
 
 const values = [
-  { icon: 'badge', title: 'Integrity',       desc: 'Honest pricing, transparent communication — always.' },
-  { icon: 'star',  title: 'Excellence',      desc: 'We set a high bar and clear it on every single move.' },
-  { icon: 'heart', title: 'Empathy',         desc: 'Moving is personal. We treat every job with human care.' },
-  { icon: 'globe', title: 'Responsibility',  desc: 'Committed to sustainable practices and our community.' },
+  { icon: 'badge', title: 'Transparency', desc: 'Clear quotes, clear timelines, and no surprise charges.' },
+  { icon: 'star',  title: 'Craft',        desc: 'Professional moving standards in every home and office.' },
+  { icon: 'heart', title: 'Care',         desc: 'We treat every item like it belongs to someone we know.' },
+  { icon: 'globe', title: 'Community',    desc: 'Built in Guelph and committed to serving Ontario well.' },
 ]
 </script>

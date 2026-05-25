@@ -24,7 +24,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label class="form-label">Phone Number</label>
-                <input v-model="form.phone" type="tel" class="form-input" placeholder="(555) 000-0000" />
+                <input v-model="form.phone" type="tel" class="form-input" placeholder="(416) 555-0136" />
               </div>
               <div>
                 <label class="form-label">Subject *</label>
@@ -95,6 +95,7 @@
 <script setup>
 import { ref, reactive, onMounted } from 'vue'
 import { supabase } from '@/lib/supabase.js'
+import { sendLeadEmail } from '@/lib/leadInbox.js'
 import PageHero from '@/components/ui/PageHero.vue'
 
 onMounted(() => { document.title = 'Contact Us | ManAndTruck Movers' })
@@ -106,10 +107,10 @@ const successMsg = ref('')
 const loading   = ref(false)
 
 const contactInfo = [
-  { iconKey: 'phone',    label: 'Phone',        value: '<a href="tel:+15551234567" class="text-secondary hover:text-primary transition-colors">(555) 123-4567</a>' },
-  { iconKey: 'email',   label: 'Email',        value: '<a href="mailto:info@manandtruckmovers.com" class="text-secondary hover:text-primary transition-colors">info@manandtruckmovers.com</a>' },
-  { iconKey: 'clock',   label: 'Hours',        value: 'Mon–Sat: 7am – 8pm<br/>Sunday: 9am – 5pm' },
-  { iconKey: 'location', label: 'Service Area', value: 'Serving 4 locations across the metro area' },
+  { iconKey: 'phone',    label: 'Phone',        value: '<a href="tel:+14165550136" class="text-secondary hover:text-primary transition-colors">(416) 555-0136</a>' },
+  { iconKey: 'email',   label: 'Email',        value: 'Use the form on this page for all inquiries and booking requests.' },
+  { iconKey: 'clock',   label: 'Hours',        value: 'Office: Mon-Sun, 8am - 8pm<br/>Moves: Sat-Sun only, 2+ weeks ahead' },
+  { iconKey: 'location', label: 'Service Area', value: 'Head office in Guelph, serving cities across Ontario with strongest coverage in Guelph, Kitchener, Waterloo, and Cambridge.' },
 ]
 
 function validate() {
@@ -122,22 +123,55 @@ function validate() {
   return Object.keys(e).length === 0
 }
 
+function validationMessage() {
+  if (errors.name) return 'Please enter your full name.'
+  if (errors.email) return 'Please enter a valid email address (example: name@email.com).'
+  if (errors.subject) return 'Please select a subject.'
+  if (errors.message) return 'Please enter your message.'
+  return 'Please fill in all required fields.'
+}
+
 async function submitContact() {
   errorMsg.value = ''
   successMsg.value = ''
-  if (!validate()) { errorMsg.value = 'Please fill in all required fields.'; return }
+  if (!validate()) { errorMsg.value = validationMessage(); return }
   loading.value = true
   try {
+    const cleanName = form.name.trim()
+    const cleanEmail = form.email.trim()
+    const cleanPhone = form.phone.trim()
+    const cleanSubject = form.subject
+    const cleanMessage = form.message.trim()
+
     const { error } = await supabase.from('contact_messages').insert([{
-      name: form.name.trim(), email: form.email.trim(),
-      phone: form.phone.trim() || null, subject: form.subject, message: form.message.trim(),
+      name: cleanName, email: cleanEmail,
+      phone: cleanPhone || null, subject: cleanSubject, message: cleanMessage,
     }])
     if (error) throw error
-    successMsg.value = 'Message sent! We\'ll get back to you within 1 business day.'
+
+    const emailDelivered = await sendLeadEmail({
+      subject: `New Inquiry: ${cleanSubject || 'General'}`,
+      name: cleanName,
+      replyTo: cleanEmail,
+      lines: [
+      `Name: ${cleanName}`,
+      `Customer Email: ${cleanEmail}`,
+      `Phone: ${cleanPhone || 'Not provided'}`,
+      `Subject: ${cleanSubject || 'General Inquiry'}`,
+      '',
+      'Message:',
+      cleanMessage,
+      ],
+    })
+
+    successMsg.value = emailDelivered
+      ? 'Message sent and forwarded to our inbox.'
+      : 'Message saved, but email relay is currently unavailable. Please call us at (416) 555-0136.'
+
     Object.assign(form, { name: '', email: '', phone: '', subject: '', message: '' })
     Object.keys(errors).forEach(k => delete errors[k])
   } catch (err) {
-    errorMsg.value = 'Something went wrong. Please call us at (555) 123-4567.'
+    errorMsg.value = 'Something went wrong. Please call us at (416) 555-0136.'
     console.error(err)
   } finally {
     loading.value = false

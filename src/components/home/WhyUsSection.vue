@@ -48,7 +48,7 @@
 import AppSlider from '@/components/ui/AppSlider.vue'
 
 const cards = [
-  { icon: 'trophy', title: 'Award-Winning Service', body: 'Recognized as the region\'s top moving company for 5 consecutive years. Excellence is our standard.' },
+  { icon: 'trophy', title: 'Award-Winning Service', body: 'Recognized as one of Ontario\'s top moving teams for consistent service quality and professionalism.' },
   { icon: 'shield', title: 'Fully Licensed & Insured', body: 'Your belongings are fully protected. We carry comprehensive liability and cargo insurance on every move.' },
   { icon: 'clock', title: 'On-Time, Every Time', body: 'We respect your schedule. Our teams arrive on time, work efficiently, and finish when promised.' },
   { icon: 'chat', title: 'Transparent Pricing', body: 'No hidden fees, no surprises. Get an honest quote upfront and pay exactly what you\'re told.' },

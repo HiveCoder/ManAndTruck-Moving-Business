@@ -1,0 +1,119 @@
+export const fallbackServices = [
+  {
+    id: 'fs-1',
+    name: 'Local Moving',
+    slug: 'local-moving',
+    short_description: 'Professional local moves across Guelph, Kitchener, Waterloo, Cambridge, and surrounding Ontario communities.',
+    description: '<p>Our local moving team delivers careful, on-time service for apartments, condos, and full homes. We protect floors and furniture, load efficiently, and place everything where you need it at your new address.</p><ul><li>Trained local crews and fully equipped trucks</li><li>Protective wrapping for furniture and fragile items</li><li>Disassembly and reassembly of standard furniture</li><li>Weekend scheduling and clear arrival windows</li></ul>',
+    icon_key: 'truck-local',
+    badge: 'Most Popular',
+    featured: true,
+    display_order: 1,
+  },
+  {
+    id: 'fs-2',
+    name: 'Long Distance Moving',
+    slug: 'long-distance-moving',
+    short_description: 'Reliable Ontario and interprovincial moves with dedicated trucks, detailed planning, and live communication.',
+    description: '<p>For long-distance relocations, we assign a dedicated move coordinator to manage timing, logistics, and delivery updates from start to finish. Your belongings stay organized and protected across every stage.</p><ul><li>Dedicated truck options for faster direct delivery</li><li>Route planning and timeline coordination</li><li>Detailed inventory and item tracking</li><li>Support for family and business relocations</li></ul>',
+    icon_key: 'truck-long',
+    badge: 'Province-Wide',
+    featured: true,
+    display_order: 2,
+  },
+  {
+    id: 'fs-3',
+    name: 'Commercial Moving',
+    slug: 'commercial-moving',
+    short_description: 'Office and retail relocations planned to reduce downtime and keep your team operational.',
+    description: '<p>Our commercial crews handle office furniture, files, and equipment with structured labeling and floor plans. We can stage moves after hours or on weekends to reduce disruption.</p><ul><li>Pre-move site walkthrough and project checklist</li><li>Labeling system for desks, departments, and equipment</li><li>After-hours and weekend move execution</li><li>Careful transport for monitors and IT hardware</li></ul>',
+    icon_key: 'building',
+    badge: null,
+    featured: true,
+    display_order: 3,
+  },
+  {
+    id: 'fs-4',
+    name: 'Packing and Unpacking',
+    slug: 'packing-services',
+    short_description: 'Full and partial packing services with organized labeling and efficient unpacking support.',
+    description: '<p>Save time and stress with professional packing. We bring high-quality supplies, protect delicate items, and label cartons clearly so your new space is easier to set up.</p><ul><li>Full-home, partial, or fragile-only packing</li><li>Kitchen, glassware, and artwork protection</li><li>Room-by-room labeling for fast unpacking</li><li>Optional unpacking and packing material removal</li></ul>',
+    icon_key: 'boxes',
+    badge: 'Time Saver',
+    featured: false,
+    display_order: 4,
+  },
+  {
+    id: 'fs-5',
+    name: 'Specialty Item Moving',
+    slug: 'specialty-items',
+    short_description: 'Pianos, antiques, safes, and delicate valuables moved with specialized equipment and handling.',
+    description: '<p>Specialty moves demand extra planning and the right tools. Our team handles sensitive and oversized items with proven methods designed to protect both your property and belongings.</p><ul><li>Piano and large instrument relocation</li><li>Antique and fine-art protective wrapping</li><li>Heavy-item handling equipment and lift support</li><li>Custom move plans for unique items</li></ul>',
+    icon_key: 'piano',
+    badge: null,
+    featured: false,
+    display_order: 5,
+  },
+  {
+    id: 'fs-6',
+    name: 'Storage Solutions',
+    slug: 'storage',
+    short_description: 'Flexible short-term and long-term storage for moves with delayed possession or staged timelines.',
+    description: '<p>If your move dates do not line up perfectly, we can coordinate safe storage as part of your moving plan. This keeps your transition organized and reduces last-minute pressure.</p><ul><li>Short-term and longer-term storage options</li><li>Clean, monitored storage environments</li><li>Pickup and redelivery scheduling support</li><li>Inventory-based item organization</li></ul>',
+    icon_key: 'warehouse',
+    badge: null,
+    featured: false,
+    display_order: 6,
+  },
+]
+
+export const fallbackBlogPosts = [
+  {
+    id: 'fb-1',
+    title: 'Ontario Moving Timeline: The 30-Day Plan That Keeps You On Track',
+    slug: 'ontario-moving-timeline-30-day-plan',
+    excerpt: 'A practical, week-by-week action plan for Ontario households moving within or between cities like Guelph, Kitchener, and Toronto.',
+    content: '<h2>30 Days Before Move Day</h2><p>Finalize your preferred moving date, request detailed quotes, and complete an early home audit. Sorting items now lowers transport volume, improves packing speed, and helps keep costs predictable.</p><h2>21 Days Before</h2><p>Confirm your moving provider and reserve required logistics such as elevator time windows, building access approvals, and parking arrangements where applicable.</p><h2>14 Days Before</h2><p>Transfer utilities and update your address across banking, insurance, subscriptions, and government records. Start packing non-essential rooms using a clear label system.</p><h2>7 Days Before</h2><p>Prepare an essentials kit, secure important documents, and review final move-day instructions with your coordinator. A short checklist review at this stage prevents common delays.</p><h2>Move Weekend</h2><p>Complete a final walkthrough, verify inventory counts, and provide priority placement notes for your new address so unloading remains organized and efficient.</p>',
+    category: 'Planning',
+    published: true,
+    published_at: '2026-05-01T09:00:00.000Z',
+  },
+  {
+    id: 'fb-2',
+    title: 'Packing Like a Pro: 12 Techniques to Prevent Damage in Transit',
+    slug: 'packing-like-a-pro-12-techniques',
+    excerpt: 'Learn professional packing methods that protect dishes, electronics, and furniture while making unpacking faster and cleaner.',
+    content: '<h2>Use Weight-Appropriate Cartons</h2><p>Distribute items by density, not by room alone. Small cartons for heavier objects reduce injury risk and improve stacking integrity in transit.</p><h2>Apply Layered Protection Standards</h2><p>Wrap fragile items individually, use structured cushioning, and eliminate internal movement. Most transit damage is caused by shifting, not impact alone.</p><h2>Standardize Labeling</h2><p>Label multiple sides with destination room, handling priority, and fragility notes. Consistent labels reduce unloading errors and improve setup efficiency.</p><h2>Build A Day-One Essentials Kit</h2><p>Keep high-priority items accessible: toiletries, chargers, medication, and key documents. This avoids unnecessary carton opening during your first evening.</p>',
+    category: 'Tips',
+    published: true,
+    published_at: '2026-04-24T09:00:00.000Z',
+  },
+  {
+    id: 'fb-3',
+    title: 'What Impacts Moving Costs in Ontario and How to Budget Accurately',
+    slug: 'ontario-moving-cost-factors-budget-guide',
+    excerpt: 'Understand the biggest pricing drivers, from distance and access conditions to packing scope and specialty-item handling.',
+    content: '<h2>Distance, Time, and Complexity</h2><p>Most local moves are labor-time driven, while longer routes incorporate distance and logistics planning. Accurate scope details produce better quote reliability.</p><h2>Access Conditions Influence Labor</h2><p>Stairs, elevator booking limits, long carry paths, and restricted loading zones can materially affect completion time. Declare these factors early to avoid surprises.</p><h2>Service Depth Affects Budget</h2><p>Packing, unpacking, temporary storage, and specialty handling add value and protection, but should be selected intentionally based on timeline and risk tolerance.</p><h2>Four Ways to Keep Costs Controlled</h2><ul><li>Declutter before packing begins</li><li>Confirm access and parking in advance</li><li>Set a practical loading and arrival window</li><li>Review line-item quote details before booking</li></ul>',
+    category: 'Costs',
+    published: true,
+    published_at: '2026-04-17T09:00:00.000Z',
+  },
+  {
+    id: 'fb-4',
+    title: 'Moving with Kids in Ontario: A Family-Friendly Transition Guide',
+    slug: 'moving-with-kids-ontario-guide',
+    excerpt: 'Keep routines stable, reduce anxiety, and help children settle into a new neighborhood with less disruption.',
+    content: '<h2>Communicate Changes With Clarity</h2><p>Discuss the move early and explain what remains consistent, including school plans, family routines, and personal spaces. Predictability lowers anxiety.</p><h2>Create Ownership In The Process</h2><p>Invite children to pack a comfort kit and choose setup priorities for their new room. Participation helps replace uncertainty with control.</p><h2>Protect Core Daily Routines</h2><p>Maintain regular mealtimes, bedtime patterns, and key activities during moving week. Consistent rhythm helps children adapt faster.</p><h2>Plan A Familiarity Week</h2><p>In the first week after arrival, visit nearby parks, community spaces, and essential services together. Early familiarity builds confidence in the new environment.</p>',
+    category: 'Family',
+    published: true,
+    published_at: '2026-04-10T09:00:00.000Z',
+  },
+]
+
+export function getFallbackServiceBySlug(slug) {
+  return fallbackServices.find((service) => service.slug === slug) || null
+}
+
+export function getFallbackBlogPostBySlug(slug) {
+  return fallbackBlogPosts.find((post) => post.slug === slug) || null
+}

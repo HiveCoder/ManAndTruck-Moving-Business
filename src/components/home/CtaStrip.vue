@@ -12,9 +12,9 @@
           class="px-8 py-3.5 bg-white text-cta font-heading font-bold text-sm uppercase tracking-widest rounded-lg hover:bg-red-50 transition-all duration-200 shadow-lg">
           Get a Free Quote
         </RouterLink>
-        <a href="tel:+15551234567"
+        <a href="tel:+14165550136"
           class="px-8 py-3.5 border-2 border-white text-white font-heading font-bold text-sm uppercase tracking-widest rounded-lg hover:bg-white hover:text-cta transition-all duration-200">
-          Call (555) 123-4567
+          Call (416) 555-0136
         </a>
       </div>
     </div>

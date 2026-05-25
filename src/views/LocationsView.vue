@@ -1,6 +1,6 @@
 <template>
   <main>
-    <PageHero title="Our Locations" subtitle="Local movers wherever you are. Serving your community with care." badge="Service Areas"
+    <PageHero title="Ontario Service Areas" subtitle="Guelph-based movers serving cities across Ontario, with strongest local coverage around Guelph and Waterloo Region." badge="Service Areas"
       :breadcrumbs="[{to:'/',label:'Home'},{label:'Locations'}]" />
 
     <section class="py-20 bg-light-bg">
@@ -40,14 +40,82 @@ import PageHero from '@/components/ui/PageHero.vue'
 import LoadingSpinner from '@/components/ui/LoadingSpinner.vue'
 import CtaStrip from '@/components/home/CtaStrip.vue'
 
-onMounted(() => { document.title = 'Locations | ManAndTruck Movers' })
+onMounted(() => { document.title = 'Locations | ManAndTruck Movers Ontario' })
 
 const locations = ref([])
 const loading   = ref(true)
 
+const ontarioCities = [
+  'Guelph',
+  'Barrie', 'Belleville', 'Brampton', 'Brantford', 'Brockville', 'Burlington',
+  'Cambridge', 'Clarence-Rockland', 'Cornwall',
+  'Dryden',
+  'Elliot Lake',
+  'Greater Sudbury',
+  'Hamilton',
+  'Kawartha Lakes', 'Kenora', 'Kingston', 'Kitchener',
+  'London',
+  'Markham', 'Mississauga',
+  'Niagara Falls', 'North Bay',
+  'Orillia', 'Oshawa', 'Ottawa', 'Owen Sound',
+  'Pembroke', 'Peterborough', 'Pickering', 'Port Colborne',
+  'Quinte West',
+  'Sarnia', 'Sault Ste. Marie', 'St. Catharines', 'St. Thomas', 'Stratford',
+  'Temiskaming Shores', 'Thorold', 'Thunder Bay', 'Timmins', 'Toronto',
+  'Vaughan',
+  'Waterloo', 'Welland', 'Windsor', 'Woodstock'
+]
+
+function slugify(value) {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')
+}
+
+function fallbackLocations() {
+  return ontarioCities.map((name, idx) => ({
+    id: `fallback-${slugify(name)}`,
+    name,
+    slug: slugify(name),
+    description: name === 'Guelph'
+      ? 'Head office and primary dispatch hub for Ontario moves.'
+      : `Serving ${name} and surrounding Ontario communities with residential and commercial moving services.`,
+    address: '',
+    phone: '(416) 555-0136',
+    active: true,
+    display_order: idx + 1,
+  }))
+}
+
+function mergeLocations(primary, fallback) {
+  const bySlug = new Map()
+  fallback.forEach((loc) => bySlug.set(loc.slug, loc))
+  primary.forEach((loc) => {
+    const slug = loc.slug || slugify(loc.name || '')
+    if (!slug || !bySlug.has(slug)) return
+    bySlug.set(slug, {
+      ...bySlug.get(slug),
+      ...loc,
+      slug,
+    })
+  })
+
+  return Array.from(bySlug.values()).sort((a, b) => {
+    const ao = Number.isFinite(a.display_order) ? a.display_order : 9999
+    const bo = Number.isFinite(b.display_order) ? b.display_order : 9999
+    if (ao !== bo) return ao - bo
+    return (a.name || '').localeCompare(b.name || '')
+  })
+}
+
 onMounted(async () => {
-  const { data } = await supabase.from('locations').select('*').eq('active', true).order('display_order')
-  locations.value = data || []
+  try {
+    const { data } = await supabase.from('locations').select('*').eq('active', true).order('display_order')
+    locations.value = mergeLocations(data || [], fallbackLocations())
+  } catch (_err) {
+    locations.value = fallbackLocations()
+  }
   loading.value = false
 })
 </script>

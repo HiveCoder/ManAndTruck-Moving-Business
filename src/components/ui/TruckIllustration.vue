@@ -37,7 +37,7 @@
     <text x="270" y="205" font-family="Oswald,sans-serif" font-size="16" font-weight="700" fill="#fff" letter-spacing="1" opacity=".9">MAN &amp; TRUCK</text>
     <text x="270" y="222" font-family="Open Sans,sans-serif" font-size="9"  font-weight="600" fill="#a8d8ea" letter-spacing="2" opacity=".8">MOVERS</text>
     <!-- Phone number on truck -->
-    <text x="270" y="245" font-family="Open Sans,sans-serif" font-size="11" fill="#fff" opacity=".7">(555) 123-4567</text>
+    <text x="270" y="245" font-family="Open Sans,sans-serif" font-size="11" fill="#fff" opacity=".7">(416) 555-0136</text>
     <!-- Stars above truck -->
     <text x="160" y="115" font-size="22" fill="#ffd166">★★★★★</text>
     <text x="168" y="135" font-family="Open Sans,sans-serif" font-size="10" fill="#a8d8ea" letter-spacing="1">Rated #1 Movers</text>

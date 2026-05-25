@@ -22,5 +22,5 @@ import DefinitionSection from '@/components/home/DefinitionSection.vue'
 import BlogSection      from '@/components/home/BlogSection.vue'
 import CtaStrip         from '@/components/home/CtaStrip.vue'
 
-onMounted(() => { document.title = 'ManAndTruck Movers | Professional Moving Services' })
+onMounted(() => { document.title = 'ManAndTruck Movers | Ontario Moving Services' })
 </script>

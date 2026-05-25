@@ -34,8 +34,8 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const slides = [
-  { prefix: 'Free in-home estimates available —', link: '/contact', linkText: 'Book yours today', suffix: '' },
-  { prefix: 'Rated #1 Moving Company in the region —', link: '/reviews', linkText: 'Read our reviews', suffix: '' },
+  { prefix: 'Guelph-based movers serving cities across Ontario —', link: '/contact', linkText: 'Book your estimate', suffix: '' },
+  { prefix: 'Top-rated Ontario moving team —', link: '/reviews', linkText: 'Read our reviews', suffix: '' },
   { prefix: 'Fully licensed & insured movers — Your belongings are safe with us', link: null, linkText: '', suffix: '' },
 ]
 

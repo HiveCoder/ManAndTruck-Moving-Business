@@ -19,6 +19,10 @@ const router = createRouter({
     { path: '/blog/:slug',      name: 'blog-post',      component: () => import('@/views/BlogPostView.vue') },
     { path: '/contact',         name: 'contact',        component: () => import('@/views/ContactView.vue') },
     { path: '/quote',           name: 'quote',          component: () => import('@/views/QuoteView.vue') },
+    { path: '/privacy',         name: 'privacy',        component: () => import('@/views/PrivacyView.vue') },
+    { path: '/terms',           name: 'terms',          component: () => import('@/views/TermsView.vue') },
+    { path: '/accessibility',   name: 'accessibility',  component: () => import('@/views/AccessibilityView.vue') },
+    { path: '/admin/quotes',    name: 'admin-quotes',   component: () => import('@/views/AdminQuotesView.vue') },
     { path: '/:pathMatch(.*)*', name: 'not-found',      component: () => import('@/views/NotFoundView.vue') },
   ],
 })

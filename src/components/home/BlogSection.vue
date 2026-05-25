@@ -42,11 +42,18 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { supabase } from '@/lib/supabase.js'
+import { fallbackBlogPosts } from '@/lib/contentFallbacks.js'
 import AppSlider from '@/components/ui/AppSlider.vue'
 import LoadingSpinner from '@/components/ui/LoadingSpinner.vue'
 
 const posts   = ref([])
 const loading = ref(true)
+const curatedSlugs = [
+  'ontario-moving-timeline-30-day-plan',
+  'packing-like-a-pro-12-techniques',
+  'ontario-moving-cost-factors-budget-guide',
+  'moving-with-kids-ontario-guide',
+]
 
 function categoryPhoto(category) {
   const map = {
@@ -72,8 +79,9 @@ onMounted(async () => {
       .select('id, title, slug, excerpt, category, published_at')
       .eq('published', true)
       .order('published_at', { ascending: false })
-      .limit(4)
-    posts.value = data || []
+      .limit(12)
+    const curatedPosts = (data || []).filter((post) => curatedSlugs.includes(post.slug)).slice(0, 4)
+    posts.value = curatedPosts.length ? curatedPosts : fallbackBlogPosts.slice(0, 4)
   } finally {
     loading.value = false
   }

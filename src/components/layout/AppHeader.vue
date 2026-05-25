@@ -44,22 +44,23 @@
           <li class="nav-item has-dropdown relative">
             <RouterLink to="/locations" class="nav-link" :class="{ active: $route.path.startsWith('/locations') }">Locations</RouterLink>
             <ul class="nav-dropdown">
-              <li><RouterLink to="/locations" class="dd-link">Downtown</RouterLink></li>
-              <li><RouterLink to="/locations" class="dd-link">Northside</RouterLink></li>
-              <li><RouterLink to="/locations" class="dd-link">Eastside</RouterLink></li>
-              <li><RouterLink to="/locations" class="dd-link">Westside</RouterLink></li>
+              <li><RouterLink to="/locations" class="dd-link">Guelph (Head Office)</RouterLink></li>
+              <li><RouterLink to="/locations" class="dd-link">Kitchener</RouterLink></li>
+              <li><RouterLink to="/locations" class="dd-link">Waterloo</RouterLink></li>
+              <li><RouterLink to="/locations" class="dd-link">Cambridge</RouterLink></li>
             </ul>
           </li>
 
-          <li class="nav-item"><RouterLink to="/about"    class="nav-link" :class="{ active: $route.path === '/about' }">About Us</RouterLink></li>
+          <li class="nav-item"><RouterLink to="/about"    class="nav-link" :class="{ active: $route.path === '/about' }">About</RouterLink></li>
           <li class="nav-item"><RouterLink to="/reviews"  class="nav-link" :class="{ active: $route.path === '/reviews' }">Reviews</RouterLink></li>
           <li class="nav-item"><RouterLink to="/blog"     class="nav-link" :class="{ active: $route.path.startsWith('/blog') }">Blog</RouterLink></li>
           <li class="nav-item"><RouterLink to="/contact"  class="nav-link" :class="{ active: $route.path === '/contact' }">Contact</RouterLink></li>
+          <li class="nav-item"><RouterLink to="/admin/quotes"  class="nav-link" :class="{ active: $route.path === '/admin/quotes' }">Admin Quotes</RouterLink></li>
 
           <li class="flex items-center gap-3 px-4 ml-2">
-            <a href="tel:+15551234567" class="flex items-center gap-1.5 text-primary font-semibold text-[0.85rem] hover:text-secondary transition-colors">
+            <a href="tel:+14165550136" class="flex items-center gap-1.5 text-primary font-semibold text-[0.85rem] hover:text-secondary transition-colors">
               <PhoneIcon class="w-4 h-4" />
-              (555) 123-4567
+              (416) 555-0136
             </a>
             <RouterLink to="/quote" class="btn-primary-sm">Get a Quote</RouterLink>
           </li>
@@ -69,7 +70,7 @@
 
       <!-- Mobile header actions -->
       <div class="lg:hidden flex items-center gap-3 ml-auto">
-        <a href="tel:+15551234567" class="text-primary font-semibold text-sm hover:text-secondary transition-colors flex items-center gap-1">
+        <a href="tel:+14165550136" class="text-primary font-semibold text-sm hover:text-secondary transition-colors flex items-center gap-1">
           <PhoneIcon class="w-4 h-4" />
         </a>
         <RouterLink to="/quote" class="btn-primary-sm">Quote</RouterLink>
@@ -117,21 +118,22 @@
           Locations <span class="text-lg">›</span>
         </button>
         <ul class="mobile-dropdown bg-light-bg">
-          <li><RouterLink to="/locations" @click="closeMobile" class="mob-sub-link">Downtown</RouterLink></li>
-          <li><RouterLink to="/locations" @click="closeMobile" class="mob-sub-link">Northside</RouterLink></li>
-          <li><RouterLink to="/locations" @click="closeMobile" class="mob-sub-link">Eastside</RouterLink></li>
-          <li><RouterLink to="/locations" @click="closeMobile" class="mob-sub-link">Westside</RouterLink></li>
+          <li><RouterLink to="/locations" @click="closeMobile" class="mob-sub-link">Guelph (Head Office)</RouterLink></li>
+          <li><RouterLink to="/locations" @click="closeMobile" class="mob-sub-link">Kitchener</RouterLink></li>
+          <li><RouterLink to="/locations" @click="closeMobile" class="mob-sub-link">Waterloo</RouterLink></li>
+          <li><RouterLink to="/locations" @click="closeMobile" class="mob-sub-link">Cambridge</RouterLink></li>
         </ul>
       </li>
 
-      <li><RouterLink to="/about"   @click="closeMobile" class="mob-link">About Us</RouterLink></li>
+      <li><RouterLink to="/about"   @click="closeMobile" class="mob-link">About</RouterLink></li>
       <li><RouterLink to="/reviews" @click="closeMobile" class="mob-link">Reviews</RouterLink></li>
       <li><RouterLink to="/blog"    @click="closeMobile" class="mob-link">Blog</RouterLink></li>
       <li><RouterLink to="/contact" @click="closeMobile" class="mob-link">Contact</RouterLink></li>
+      <li><RouterLink to="/admin/quotes" @click="closeMobile" class="mob-link">Admin Quotes</RouterLink></li>
 
       <li class="flex flex-col gap-3 px-6 pt-4">
-        <a href="tel:+15551234567" class="flex items-center gap-2 text-primary font-semibold">
-          <PhoneIcon class="w-5 h-5" /> (555) 123-4567
+        <a href="tel:+14165550136" class="flex items-center gap-2 text-primary font-semibold">
+          <PhoneIcon class="w-5 h-5" /> (416) 555-0136
         </a>
         <RouterLink to="/quote" @click="closeMobile" class="btn-primary-sm text-center">Get a Free Quote</RouterLink>
       </li>
@@ -177,7 +179,7 @@ onUnmounted(() => {
 
 <style scoped>
 .nav-link {
-  @apply flex items-center h-full px-4 font-heading text-[0.97rem] font-semibold uppercase tracking-wide text-primary relative transition-colors duration-200 hover:text-secondary;
+  @apply flex items-center whitespace-nowrap h-full px-4 font-heading text-[0.97rem] font-semibold uppercase tracking-wide text-primary relative transition-colors duration-200 hover:text-secondary;
 }
 .nav-link::after {
   content: '';
