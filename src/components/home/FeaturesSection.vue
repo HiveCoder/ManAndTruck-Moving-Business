@@ -18,7 +18,7 @@
         <div class="flex flex-col gap-5">
           <p class="text-xs uppercase tracking-[0.2em] font-heading font-semibold text-secondary">{{ block.tag }}</p>
           <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary uppercase tracking-wide leading-tight">{{ block.title }}</h2>
-          <p class="text-gray-500 text-base leading-relaxed">{{ block.body }}</p>
+          <p class="text-gray-700 text-base leading-relaxed">{{ block.body }}</p>
           <ul class="flex flex-col gap-2">
             <li v-for="feat in block.features" :key="feat" class="flex items-start gap-3 text-sm text-gray-600">
               <span class="text-secondary text-base leading-5 shrink-0">✓</span>

@@ -31,7 +31,7 @@
                 <span class="text-xl leading-none shrink-0 ml-2 transition-transform duration-300" :class="openFaq === i ? 'rotate-45' : ''">+</span>
               </button>
               <div class="faq-answer" :class="{ open: openFaq === i }">
-                <p class="px-6 py-4 text-gray-500 text-sm leading-relaxed">{{ faq.a }}</p>
+                <p class="px-6 py-4 text-gray-700 text-sm leading-relaxed">{{ faq.a }}</p>
               </div>
             </div>
           </div>
@@ -43,7 +43,7 @@
 
     <template v-else>
       <div class="py-24 text-center">
-        <p class="text-gray-400 text-lg">Service not found.</p>
+        <p class="text-gray-600 text-lg">Service not found.</p>
         <RouterLink to="/services" class="mt-4 inline-block text-secondary underline">View all services</RouterLink>
       </div>
     </template>

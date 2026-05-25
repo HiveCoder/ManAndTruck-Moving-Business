@@ -7,8 +7,8 @@
         </svg>
       </div>
       <h1 class="font-heading text-5xl font-bold text-primary uppercase tracking-wide">404</h1>
-      <p class="text-2xl font-heading font-semibold text-gray-400 uppercase tracking-wide">Page Not Found</p>
-      <p class="text-gray-400 text-base max-w-md">Looks like this page took a wrong turn. Let us help you get back on track.</p>
+      <p class="text-2xl font-heading font-semibold text-gray-600 uppercase tracking-wide">Page Not Found</p>
+      <p class="text-gray-700 text-base max-w-md">Looks like this page took a wrong turn. Let us help you get back on track.</p>
       <div class="flex flex-wrap justify-center gap-4 mt-2">
         <RouterLink to="/"       class="px-6 py-3 bg-primary text-white font-heading font-bold text-sm uppercase tracking-wide rounded-lg hover:bg-primary-dark transition-colors">Back to Home</RouterLink>
         <RouterLink to="/quote"  class="px-6 py-3 border-2 border-primary text-primary font-heading font-bold text-sm uppercase tracking-wide rounded-lg hover:bg-primary hover:text-white transition-all">Get a Quote</RouterLink>

@@ -18,7 +18,7 @@
   h2 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); }
   h3 { font-size: clamp(1.3rem, 3vw, 1.9rem); }
   h4 { font-size: clamp(1rem, 2vw, 1.3rem); }
-  p  { @apply text-gray-500; }
+  p  { @apply text-gray-700; }
 }
 
 /* ===== ANNOUNCEMENT BAR FADE TRANSITION ===== */

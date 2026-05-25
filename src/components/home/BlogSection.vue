@@ -19,7 +19,7 @@
                 <div class="p-5 flex flex-col gap-3 flex-1">
                   <span class="text-[0.7rem] uppercase tracking-widest font-heading font-semibold text-secondary">{{ item.category }}</span>
                   <h3 class="font-heading font-bold text-base text-primary leading-snug">{{ item.title }}</h3>
-                  <p class="text-gray-500 text-sm leading-relaxed line-clamp-3 flex-1">{{ item.excerpt }}</p>
+                  <p class="text-gray-700 text-sm leading-relaxed line-clamp-3 flex-1">{{ item.excerpt }}</p>
                   <RouterLink :to="`/blog/${item.slug}`" class="mt-2 text-secondary font-semibold text-sm font-heading uppercase tracking-wide hover:text-primary transition-colors">
                     Read More →
                   </RouterLink>

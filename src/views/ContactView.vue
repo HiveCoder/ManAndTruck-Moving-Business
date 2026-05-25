@@ -146,6 +146,6 @@ async function submitContact() {
 </script>
 
 <style scoped>
-.form-label { @apply block text-xs font-heading font-semibold uppercase tracking-wide text-gray-500 mb-1; }
+.form-label { @apply block text-xs font-heading font-semibold uppercase tracking-wide text-gray-700 mb-1; }
 .form-input  { @apply w-full px-4 py-2.5 text-sm border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary/40 focus:border-secondary transition-all duration-200; }
 </style>

@@ -18,13 +18,13 @@
             <div class="p-6 flex flex-col gap-3 flex-1">
               <span class="text-[0.7rem] uppercase tracking-widest font-heading font-semibold text-secondary">{{ p.category }}</span>
               <h2 class="font-heading font-bold text-lg text-primary leading-snug group-hover:text-secondary transition-colors">{{ p.title }}</h2>
-              <p class="text-gray-500 text-sm leading-relaxed line-clamp-3 flex-1">{{ p.excerpt }}</p>
-              <p v-if="p.published_at" class="text-xs text-gray-400">{{ formatDate(p.published_at) }}</p>
+              <p class="text-gray-700 text-sm leading-relaxed line-clamp-3 flex-1">{{ p.excerpt }}</p>
+              <p v-if="p.published_at" class="text-xs text-gray-600">{{ formatDate(p.published_at) }}</p>
               <span class="text-secondary font-semibold text-sm font-heading uppercase tracking-wide">Read More →</span>
             </div>
           </RouterLink>
         </div>
-        <p v-else class="text-center text-gray-400">No articles published yet. Check back soon!</p>
+        <p v-else class="text-center text-gray-600">No articles published yet. Check back soon!</p>
       </div>
     </section>
 

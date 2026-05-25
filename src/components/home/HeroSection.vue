@@ -15,7 +15,7 @@
             Moving Made<br>
             <span class="text-accent">Simple.</span>
           </h1>
-          <p class="text-white/75 text-lg max-w-lg leading-relaxed">
+          <p class="text-white/90 text-lg max-w-lg leading-relaxed">
             Professional, careful, on-time moving services for homes and businesses. Licensed, insured, and fully dedicated to your peace of mind.
           </p>
         </div>
@@ -40,7 +40,7 @@
 
             <div class="flex flex-col gap-1">
               <input v-model="form.move_date" type="date" :min="today" class="form-input" :disabled="form.no_date" :class="{ 'border-red-400': errors.move_date, 'opacity-50 cursor-not-allowed': form.no_date }" />
-              <label class="flex items-center gap-2 text-xs text-gray-500 cursor-pointer">
+              <label class="flex items-center gap-2 text-xs text-gray-700 cursor-pointer">
                 <input v-model="form.no_date" type="checkbox" class="accent-secondary w-4 h-4" />
                 I don't have a date yet
               </label>
@@ -57,7 +57,7 @@
             </div>
             <input v-model="form.email" type="email" placeholder="Email Address" class="form-input" :class="{ 'border-red-400': errors.email }" />
 
-            <label class="flex items-start gap-2 text-xs text-gray-500 cursor-pointer mt-1">
+            <label class="flex items-start gap-2 text-xs text-gray-700 cursor-pointer mt-1">
               <input v-model="form.consent" type="checkbox" class="accent-secondary w-4 h-4 mt-0.5 shrink-0" required />
               I agree to be contacted about my moving quote. View our
               <RouterLink to="/privacy" class="underline text-secondary">Privacy Policy</RouterLink>.

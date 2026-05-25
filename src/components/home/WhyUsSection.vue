@@ -35,7 +35,7 @@
                 </svg>
               </div>
               <h3 class="font-heading font-bold text-lg text-primary uppercase tracking-wide">{{ item.title }}</h3>
-              <p class="text-gray-500 text-sm leading-relaxed flex-1">{{ item.body }}</p>
+              <p class="text-gray-700 text-sm leading-relaxed flex-1">{{ item.body }}</p>
             </div>
           </div>
         </template>

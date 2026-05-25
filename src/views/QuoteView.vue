@@ -7,7 +7,7 @@
       <div class="max-w-[760px] mx-auto px-6">
         <div class="bg-white rounded-xl shadow-card-lg p-8 md:p-10">
           <h2 class="font-heading font-bold text-xl text-primary uppercase tracking-wide mb-2">Move Details</h2>
-          <p class="text-gray-400 text-sm mb-8">All fields marked * are required.</p>
+          <p class="text-gray-600 text-sm mb-8">All fields marked * are required.</p>
 
           <form @submit.prevent="submit" novalidate class="flex flex-col gap-5">
 
@@ -25,7 +25,7 @@
             <div>
               <label class="form-label">Preferred Move Date</label>
               <input v-model="form.move_date" type="date" :min="today" class="form-input" :disabled="form.no_date" :class="{ 'opacity-50': form.no_date }" />
-              <label class="flex items-center gap-2 mt-2 text-xs text-gray-500 cursor-pointer">
+              <label class="flex items-center gap-2 mt-2 text-xs text-gray-700 cursor-pointer">
                 <input v-model="form.no_date" type="checkbox" class="accent-secondary w-4 h-4" />
                 I don't have a date yet — flexible
               </label>
@@ -54,7 +54,7 @@
               <input v-model="form.email" type="email" class="form-input" :class="{ 'border-red-400': errors.email }" placeholder="jane@example.com" />
             </div>
 
-            <label class="flex items-start gap-2 text-xs text-gray-500 cursor-pointer">
+            <label class="flex items-start gap-2 text-xs text-gray-700 cursor-pointer">
               <input v-model="form.consent" type="checkbox" class="accent-secondary w-4 h-4 mt-0.5 shrink-0" required />
               I agree to be contacted about my quote. See our <RouterLink to="/privacy" class="underline text-secondary">Privacy Policy</RouterLink>.
             </label>
@@ -67,7 +67,7 @@
               {{ loading ? 'Sending…' : 'Request My Free Quote' }}
             </button>
 
-            <p class="text-center text-xs text-gray-400">No obligation. We'll contact you within 24 hours.</p>
+            <p class="text-center text-xs text-gray-600">No obligation. We'll contact you within 24 hours.</p>
           </form>
         </div>
       </div>
@@ -127,6 +127,6 @@ async function submit() {
 </script>
 
 <style scoped>
-.form-label { @apply block text-xs font-heading font-semibold uppercase tracking-wide text-gray-500 mb-1; }
+.form-label { @apply block text-xs font-heading font-semibold uppercase tracking-wide text-gray-700 mb-1; }
 .form-input  { @apply w-full px-4 py-2.5 text-sm border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary/40 focus:border-secondary transition-all duration-200; }
 </style>

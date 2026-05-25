@@ -10,8 +10,8 @@
           <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary uppercase tracking-wide leading-tight">
             Moving Families &amp; Businesses for Over 15 Years
           </h2>
-          <p class="text-gray-500 leading-relaxed">ManAndTruck Movers was founded on a simple belief: moving should be a fresh start, not a nightmare. Since our first move in 2009, we've grown from a single truck to a fleet of 20+ vehicles — but we've never lost that family-business commitment to every customer.</p>
-          <p class="text-gray-500 leading-relaxed">Our team of trained, background-checked professionals treat every home and office with the respect it deserves. From the first phone call to the final piece of furniture placed, we're with you every step of the way.</p>
+          <p class="text-gray-700 leading-relaxed">ManAndTruck Movers was founded on a simple belief: moving should be a fresh start, not a nightmare. Since our first move in 2009, we've grown from a single truck to a fleet of 20+ vehicles — but we've never lost that family-business commitment to every customer.</p>
+          <p class="text-gray-700 leading-relaxed">Our team of trained, background-checked professionals treat every home and office with the respect it deserves. From the first phone call to the final piece of furniture placed, we're with you every step of the way.</p>
           <div class="grid grid-cols-2 gap-4 mt-2">
             <div v-for="stat in stats" :key="stat.label" class="bg-light-bg rounded-xl p-5 text-center">
               <p class="font-heading font-bold text-3xl text-primary">{{ stat.val }}</p>
@@ -54,7 +54,7 @@
               </svg>
             </div>
             <h3 class="font-heading font-bold text-base text-primary uppercase tracking-wide">{{ val.title }}</h3>
-            <p class="text-gray-500 text-sm leading-relaxed">{{ val.desc }}</p>
+            <p class="text-gray-700 text-sm leading-relaxed">{{ val.desc }}</p>
           </div>
         </div>
       </div>

@@ -14,7 +14,7 @@
             <text x="58" y="44" font-family="Open Sans,sans-serif" font-size="10" font-weight="600" fill="#a8d8ea" letter-spacing="2">MOVERS</text>
           </svg>
         </RouterLink>
-        <p class="text-white/60 text-sm leading-relaxed max-w-[260px]">
+        <p class="text-white/80 text-sm leading-relaxed max-w-[260px]">
           Professional moving services you can trust. Licensed, insured, and dedicated to a stress-free move.
         </p>
         <div class="flex gap-3" aria-label="Social media">
@@ -30,7 +30,7 @@
         <ul class="flex flex-wrap gap-x-6 gap-y-2">
           <li v-for="link in links" :key="link.to">
             <RouterLink :to="link.to"
-              class="font-heading text-[0.85rem] font-semibold uppercase tracking-wide text-white/75 hover:text-accent transition-colors duration-200">
+              class="font-heading text-[0.85rem] font-semibold uppercase tracking-wide text-white/90 hover:text-accent transition-colors duration-200">
               {{ link.label }}
             </RouterLink>
           </li>
@@ -39,10 +39,10 @@
 
       <!-- Contact -->
       <div class="flex flex-col gap-4">
-        <p class="text-white/45 text-[0.74rem] uppercase tracking-[0.09em] font-heading font-semibold">Contact Us</p>
+        <p class="text-white/70 text-[0.74rem] uppercase tracking-[0.09em] font-heading font-semibold">Contact Us</p>
         <a href="tel:+15551234567" class="text-white/90 font-semibold text-base hover:text-accent transition-colors">(555) 123-4567</a>
-        <a href="mailto:info@manandtruckmovers.com" class="text-white/60 text-sm hover:text-accent transition-colors">info@manandtruckmovers.com</a>
-        <p class="text-white/45 text-sm leading-relaxed">Mon–Sat: 7am – 8pm<br/>Sun: 9am – 5pm</p>
+        <a href="mailto:info@manandtruckmovers.com" class="text-white/85 text-sm hover:text-accent transition-colors">info@manandtruckmovers.com</a>
+        <p class="text-white/75 text-sm leading-relaxed">Mon–Sat: 7am – 8pm<br/>Sun: 9am – 5pm</p>
         <RouterLink to="/quote" class="inline-block px-5 py-2.5 border-2 border-white text-white font-heading font-semibold text-sm uppercase tracking-wide rounded text-center hover:bg-white hover:text-primary transition-all duration-200">
           Get a Free Quote
         </RouterLink>
@@ -53,11 +53,11 @@
     <div class="bg-primary-dark px-6 py-5 text-center">
       <nav class="flex flex-wrap justify-center gap-x-6 gap-y-1 mb-2" aria-label="Legal links">
         <RouterLink v-for="l in legal" :key="l.to" :to="l.to"
-          class="text-[0.78rem] uppercase tracking-wide font-heading font-semibold text-white/60 hover:text-accent transition-colors">
+          class="text-[0.78rem] uppercase tracking-wide font-heading font-semibold text-white/80 hover:text-accent transition-colors">
           {{ l.label }}
         </RouterLink>
       </nav>
-      <p class="text-[0.78rem] text-white/45">&copy; {{ year }} ManAndTruck Movers. All rights reserved. &nbsp;|&nbsp; Licensed &amp; Insured &nbsp;|&nbsp; DOT# 1234567</p>
+      <p class="text-[0.78rem] text-white/70">&copy; {{ year }} ManAndTruck Movers. All rights reserved. &nbsp;|&nbsp; Licensed &amp; Insured &nbsp;|&nbsp; DOT# 1234567</p>
     </div>
   </footer>
 </template>

@@ -12,7 +12,7 @@
 
       <article class="py-20 bg-white">
         <div class="max-w-[800px] mx-auto px-6">
-          <div v-if="post.published_at" class="text-gray-400 text-sm mb-8">
+          <div v-if="post.published_at" class="text-gray-600 text-sm mb-8">
             Published {{ formatDate(post.published_at) }}
           </div>
           <!-- prose-like styling via Tailwind Typography; fallback via inline styles -->
@@ -28,7 +28,7 @@
 
     <template v-else>
       <div class="py-24 text-center">
-        <p class="text-gray-400 text-lg">Article not found.</p>
+        <p class="text-gray-600 text-lg">Article not found.</p>
         <RouterLink to="/blog" class="mt-4 inline-block text-secondary underline">Back to Blog</RouterLink>
       </div>
     </template>

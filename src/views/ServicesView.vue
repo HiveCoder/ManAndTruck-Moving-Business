@@ -18,12 +18,12 @@
             </div>
             <div class="p-6 flex flex-col gap-3 flex-1">
               <h2 class="font-heading font-bold text-lg text-primary uppercase tracking-wide group-hover:text-secondary transition-colors">{{ s.name }}</h2>
-              <p class="text-gray-500 text-sm leading-relaxed flex-1">{{ s.short_description }}</p>
+              <p class="text-gray-700 text-sm leading-relaxed flex-1">{{ s.short_description }}</p>
               <span class="text-secondary font-semibold text-sm font-heading uppercase tracking-wide">Learn More →</span>
             </div>
           </RouterLink>
         </div>
-        <p v-else class="text-center text-gray-400">No services found.</p>
+        <p v-else class="text-center text-gray-600">No services found.</p>
       </div>
     </section>
 

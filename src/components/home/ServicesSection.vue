@@ -19,7 +19,7 @@
                 </div>
                 <div class="p-5 flex flex-col gap-3 flex-1">
                   <h3 class="font-heading font-bold text-base text-primary uppercase tracking-wide">{{ item.name }}</h3>
-                  <p class="text-gray-500 text-sm leading-relaxed flex-1">{{ item.short_description }}</p>
+                  <p class="text-gray-700 text-sm leading-relaxed flex-1">{{ item.short_description }}</p>
                   <RouterLink :to="`/services/${item.slug}`" class="mt-2 text-secondary font-semibold text-sm font-heading uppercase tracking-wide hover:text-primary transition-colors">
                     Learn More →
                   </RouterLink>

@@ -11,12 +11,12 @@
           <div class="text-center">
             <p class="font-heading font-bold text-5xl text-primary">4.9</p>
             <p class="text-yellow-400 text-xl leading-none mt-1">★★★★★</p>
-            <p class="text-xs text-gray-400 uppercase tracking-wide font-heading font-semibold mt-1">Overall Rating</p>
+            <p class="text-xs text-gray-600 uppercase tracking-wide font-heading font-semibold mt-1">Overall Rating</p>
           </div>
           <div class="h-16 w-px bg-border hidden sm:block"></div>
           <div class="flex flex-col gap-1">
             <p class="font-heading font-bold text-xl text-primary">10,000+ Happy Customers</p>
-            <p class="text-gray-500 text-sm">Verified reviews from Google, Yelp, and Facebook</p>
+            <p class="text-gray-700 text-sm">Verified reviews from Google, Yelp, and Facebook</p>
           </div>
           <a href="https://g.page/r/review" rel="noopener noreferrer"
             class="ml-auto px-5 py-2.5 bg-primary text-white font-heading font-bold text-xs uppercase tracking-widest rounded-lg hover:bg-primary-dark transition-colors">
@@ -32,16 +32,16 @@
           >
             <div class="flex items-center justify-between">
               <span class="text-yellow-400 text-base tracking-tight">{{ '★'.repeat(r.rating) }}</span>
-              <span class="text-xs text-gray-400 uppercase tracking-wide font-heading font-semibold">{{ r.source }}</span>
+              <span class="text-xs text-gray-600 uppercase tracking-wide font-heading font-semibold">{{ r.source }}</span>
             </div>
             <p class="text-gray-600 text-sm leading-relaxed italic flex-1">"{{ r.review_text }}"</p>
             <div>
               <p class="font-heading font-bold text-sm text-primary">{{ r.author_name }}</p>
-              <p v-if="r.location" class="text-xs text-gray-400">{{ r.location }}</p>
+              <p v-if="r.location" class="text-xs text-gray-600">{{ r.location }}</p>
             </div>
           </div>
         </div>
-        <p v-else class="text-center text-gray-400">No reviews yet.</p>
+        <p v-else class="text-center text-gray-600">No reviews yet.</p>
       </div>
     </section>
 

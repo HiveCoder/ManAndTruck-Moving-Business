@@ -1,10 +1,10 @@
 <template>
   <section class="py-16 bg-primary text-white">
     <div class="max-w-[900px] mx-auto px-6 text-center flex flex-col gap-6">
-      <h2 class="font-heading text-3xl md:text-4xl font-bold uppercase tracking-wide">
-        What Does <span class="text-accent">"Full-Service Moving"</span> Actually Mean?
+      <h2 class="font-heading text-3xl md:text-4xl font-bold uppercase tracking-wide text-white">
+        What Does <span class="text-accent">“Full-Service Moving”</span> Actually Mean?
       </h2>
-      <p class="text-white/75 text-lg leading-relaxed">
+      <p class="text-white/90 text-lg leading-relaxed">
         It means you don't lift a finger. Our crews handle every step — from carefully packing your kitchen to reassembling your bedroom furniture in your new home. We bring the truck, the materials, and the manpower. You just walk in the door.
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
@@ -21,8 +21,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
             </svg>
           </div>
-          <p class="font-heading font-bold text-sm uppercase tracking-wide">{{ step.label }}</p>
-          <p class="text-white/60 text-xs leading-relaxed">{{ step.desc }}</p>
+          <p class="font-heading font-bold text-sm uppercase tracking-wide text-white">{{ step.label }}</p>
+          <p class="text-white/85 text-xs leading-relaxed">{{ step.desc }}</p>
         </div>
       </div>
     </div>

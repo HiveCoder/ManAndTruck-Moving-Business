@@ -18,14 +18,14 @@
               </svg>
             </div>
             <h2 class="font-heading font-bold text-lg text-primary uppercase tracking-wide">{{ loc.name }}</h2>
-            <p class="text-gray-500 text-sm leading-relaxed flex-1">{{ loc.description }}</p>
-            <div class="flex flex-col gap-1 text-sm text-gray-400">
+            <p class="text-gray-700 text-sm leading-relaxed flex-1">{{ loc.description }}</p>
+            <div class="flex flex-col gap-1 text-sm text-gray-600">
               <p v-if="loc.address">{{ loc.address }}</p>
               <a v-if="loc.phone" :href="`tel:${loc.phone.replace(/\D/g,'')}`" class="text-secondary hover:text-primary transition-colors font-semibold">{{ loc.phone }}</a>
             </div>
           </div>
         </div>
-        <p v-else class="text-center text-gray-400">No locations found.</p>
+        <p v-else class="text-center text-gray-600">No locations found.</p>
       </div>
     </section>
 

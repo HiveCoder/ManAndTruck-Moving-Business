@@ -192,7 +192,7 @@ onUnmounted(() => {
   @apply flex items-center px-[1.1rem] py-[0.65rem] font-heading text-[0.87rem] font-semibold uppercase tracking-wide text-primary border-b border-border transition-colors duration-200 hover:bg-light-bg hover:text-secondary last:border-b-0;
 }
 .sub-link {
-  @apply block px-4 py-[0.6rem] font-body text-[0.84rem] text-gray-500 border-b border-border transition-colors duration-200 hover:bg-light-bg hover:text-secondary last:border-b-0;
+  @apply block px-4 py-[0.6rem] font-body text-[0.84rem] text-gray-700 border-b border-border transition-colors duration-200 hover:bg-light-bg hover:text-secondary last:border-b-0;
 }
 
 .btn-primary-sm {
@@ -203,6 +203,6 @@ onUnmounted(() => {
   @apply block px-6 py-[0.9rem] font-heading text-base font-semibold uppercase tracking-wide text-primary border-b border-border transition-colors duration-200 hover:text-secondary;
 }
 .mob-sub-link {
-  @apply block px-8 py-3 font-body text-sm text-gray-500 border-b border-border transition-colors duration-200 hover:text-secondary;
+  @apply block px-8 py-3 font-body text-sm text-gray-700 border-b border-border transition-colors duration-200 hover:text-secondary;
 }
 </style>
