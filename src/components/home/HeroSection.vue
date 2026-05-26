@@ -16,7 +16,7 @@
             <span class="text-accent">Simple.</span>
           </h1>
           <p class="text-white/90 text-lg max-w-lg leading-relaxed">
-            Professional, careful, on-time moving services for homes and businesses. Licensed, insured, and fully dedicated to your peace of mind.
+            Professional, careful, on-time moving services for homes and businesses. Fully dedicated to your peace of mind.
           </p>
         </div>
 
@@ -106,7 +106,7 @@ import { sendLeadEmail } from '@/lib/leadInbox.js'
 import { firstBookableWeekend, formatDateInput, isValidMoveDate } from '@/lib/scheduling.js'
 import WeekendDatePicker from '@/components/ui/WeekendDatePicker.vue'
 
-const badges = ['Licensed & Insured', 'Free Estimates', 'No Hidden Fees', 'On-Time Guaranteed']
+const badges = ['Free Estimates', 'No Hidden Fees', 'On-Time Guaranteed']
 
 const postalCodeRegex = /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/
 const minMoveDate = formatDateInput(firstBookableWeekend())

@@ -15,7 +15,7 @@
           </svg>
         </RouterLink>
         <p class="text-white/80 text-sm leading-relaxed max-w-[260px]">
-          Professional moving services you can trust. Licensed, insured, and dedicated to a stress-free move.
+          Professional moving services you can trust. Dedicated to a stress-free move.
         </p>
         <div class="flex gap-3" aria-label="Social media">
           <a v-for="s in socials" :key="s.label" :href="s.href" :aria-label="s.label" rel="noopener noreferrer"
@@ -57,7 +57,7 @@
           {{ l.label }}
         </RouterLink>
       </nav>
-      <p class="text-[0.78rem] text-white/70">&copy; {{ year }} ManAndTruck Movers. All rights reserved. &nbsp;|&nbsp; Licensed &amp; Insured in Ontario &nbsp;|&nbsp; Guelph-based, serving cities across Ontario</p>
+      <p class="text-[0.78rem] text-white/70">&copy; {{ year }} ManAndTruck Movers. All rights reserved. &nbsp;|&nbsp; Guelph-based, serving cities across Ontario</p>
     </div>
   </footer>
 </template>

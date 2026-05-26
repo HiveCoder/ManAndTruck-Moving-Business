@@ -11,7 +11,7 @@
             <h2 class="mt-2 font-heading text-2xl md:text-3xl font-bold text-primary uppercase tracking-wide">Built For Homes, Offices, And Specialty Moves</h2>
           </div>
           <div class="flex flex-wrap gap-2 text-[0.68rem]">
-            <span class="px-3 py-1 rounded-full bg-white border border-border text-primary uppercase tracking-[0.14em] font-heading font-semibold">Licensed & Insured</span>
+
             <span class="px-3 py-1 rounded-full bg-white border border-border text-primary uppercase tracking-[0.14em] font-heading font-semibold">Weekend Availability</span>
             <span class="px-3 py-1 rounded-full bg-white border border-border text-primary uppercase tracking-[0.14em] font-heading font-semibold">Ontario Service Area</span>
           </div>

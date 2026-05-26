@@ -36,7 +36,6 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const slides = [
   { prefix: 'Guelph-based movers serving cities across Ontario —', link: '/contact', linkText: 'Book your estimate', suffix: '' },
   { prefix: 'Top-rated Ontario moving team —', link: '/reviews', linkText: 'Read our reviews', suffix: '' },
-  { prefix: 'Fully licensed & insured movers — Your belongings are safe with us', link: null, linkText: '', suffix: '' },
 ]
 
 const current = ref(0)
