@@ -1,6 +1,6 @@
 <template>
   <main>
-    <PageHero title="Our Moving Services" subtitle="From studio apartments to corporate offices — we move it all." badge="What We Offer"
+    <PageHero title="Our Moving &amp; Cleaning Services" subtitle="From studio apartments to corporate offices — we move and clean it all." badge="What We Offer"
       :breadcrumbs="[{to:'/',label:'Home'},{label:'Services'}]" />
 
     <section class="py-20 bg-light-bg">
@@ -8,7 +8,7 @@
         <div class="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <p class="text-xs uppercase tracking-[0.2em] font-heading font-semibold text-secondary">Professional Move Solutions</p>
-            <h2 class="mt-2 font-heading text-2xl md:text-3xl font-bold text-primary uppercase tracking-wide">Built For Homes, Offices, And Specialty Moves</h2>
+            <h2 class="mt-2 font-heading text-2xl md:text-3xl font-bold text-primary uppercase tracking-wide">Built For Homes, Offices, And Spotless Spaces</h2>
           </div>
           <div class="flex flex-wrap gap-2 text-[0.68rem]">
 
@@ -61,7 +61,7 @@ import PageHero from '@/components/ui/PageHero.vue'
 import LoadingSpinner from '@/components/ui/LoadingSpinner.vue'
 import CtaStrip from '@/components/home/CtaStrip.vue'
 
-onMounted(() => { document.title = 'Services | ManAndTruck Movers' })
+onMounted(() => { document.title = 'Services | ManAndTruck Moving & Cleaning' })
 
 const services = ref([])
 const loading  = ref(true)
@@ -77,6 +77,7 @@ function servicePhoto(iconKey) {
     'piano':       'https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=600&h=300&fit=crop&q=80',
     'warehouse':   'https://images.unsplash.com/photo-1600725935160-f67ee4f6084a?w=600&h=300&fit=crop&q=80',
     'star':        'https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=600&h=300&fit=crop&q=80',
+    'cleaning':    'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=300&fit=crop&q=80',
   }
   return map[iconKey] || 'https://images.unsplash.com/photo-1698917414969-feade59e3343?w=600&h=300&fit=crop&q=80'
 }
@@ -112,6 +113,11 @@ function serviceMeta(slug) {
       coverage: 'Short & Long-Term',
       crew: 'Storage Coordination',
       timing: 'Flexible Redelivery',
+    },
+    'cleaning-services': {
+      coverage: 'Homes, Condos & Offices',
+      crew: 'Certified Cleaners',
+      timing: 'Pre & Post-Move',
     },
   }
 

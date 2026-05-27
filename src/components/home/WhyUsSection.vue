@@ -3,7 +3,7 @@
     <div class="max-w-[1280px] mx-auto px-6">
       <div class="text-center mb-12">
         <p class="text-sm uppercase tracking-[0.2em] font-heading font-semibold text-secondary mb-2">The ManAndTruck Difference</p>
-        <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary uppercase tracking-wide">Why Thousands Trust Us</h2>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary uppercase tracking-wide">Why Thousands Choose Us for Moving &amp; Cleaning</h2>
       </div>
 
       <AppSlider
@@ -53,6 +53,7 @@ const cards = [
   { icon: 'chat', title: 'Transparent Pricing', body: 'No hidden fees, no surprises. Get an honest quote upfront and pay exactly what you\'re told.' },
   { icon: 'users', title: 'Dedicated Move Coordinator', body: 'Every customer gets a personal coordinator to handle the details and answer questions from start to finish.' },
   { icon: 'globe', title: 'Eco-Friendly Practices', body: 'Reusable packing materials, fuel-efficient routing, and waste-reducing practices to protect the planet.' },
+  { icon: 'shield', title: 'Spotless Move-In/Out Cleans', body: 'Our certified cleaning crews deep-clean kitchens, bathrooms, and every corner so your property is ready for handover or move-in.' },
 ]
 
 function visibleFn() {

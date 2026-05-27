@@ -64,6 +64,20 @@ const blocks = [
     ],
     cta: { to: '/services/packing-services', label: 'Packing Services' },
   },
+  {
+    tag: 'Cleaning Services',
+    title: 'Leave Every Space Spotless',
+    body: 'Our certified cleaning crews handle move-in, move-out, and deep-clean jobs alongside your move or as a standalone booking. Walk out or walk in to a property that shines.',
+    photo: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=600&fit=crop&q=80',
+    visual: 'Certified Move-In / Move-Out Cleaning',
+    features: [
+      'Move-in and move-out cleans meeting landlord standards',
+      'Deep kitchen and bathroom cleaning',
+      'Eco-friendly, pet-safe products',
+      'Post-renovation cleanup available',
+    ],
+    cta: { to: '/services/cleaning-services', label: 'Cleaning Services' },
+  },
 ]
 </script>
 

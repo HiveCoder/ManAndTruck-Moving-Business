@@ -65,6 +65,17 @@ export const fallbackServices = [
     featured: false,
     display_order: 6,
   },
+  {
+    id: 'fs-7',
+    name: 'Cleaning Services',
+    slug: 'cleaning-services',
+    short_description: 'Professional move-in, move-out, and deep cleaning for homes and offices — leaving your space spotless before or after your move.',
+    description: '<p>Our certified cleaning crews take care of every corner — from appliances and baseboards to windows and bathrooms — so you can hand over or take possession of your property with full confidence.</p><ul><li>Move-in and move-out cleans</li><li>Deep cleaning for kitchens and bathrooms</li><li>Post-renovation cleanup</li><li>Eco-friendly, pet-safe cleaning products</li><li>Flexible scheduling alongside your move</li></ul>',
+    icon_key: 'cleaning',
+    badge: 'New Service',
+    featured: true,
+    display_order: 7,
+  },
 ]
 
 export const fallbackBlogPosts = [

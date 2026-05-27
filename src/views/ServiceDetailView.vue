@@ -87,6 +87,7 @@ const loading = ref(true)
 const openFaq = ref(null)
 
 const faqs = [
+  { q: 'Do you offer cleaning services alongside moving?', a: 'Yes. We offer professional move-in, move-out, and deep-cleaning services that can be booked alongside your move or as a standalone service. Our certified cleaning crews handle kitchens, bathrooms, appliances, and every corner so your property is spotless for handover or possession.' },
   { q: 'How far in advance should I book my move?', a: 'For the best date and time options, we recommend booking 2 to 4 weeks ahead for local moves and 4 to 8 weeks ahead for long-distance moves. Need last-minute help? Contact us and we will check current availability.' },
   { q: 'What is included in your moving service?', a: 'Our standard moving service includes a trained moving crew, a fully equipped truck, furniture protection, loading and unloading, and placement of items in your new home. We can also add packing, unpacking, and junk removal as needed.' },
   { q: 'Do you offer packing services and moving supplies?', a: 'Yes. We offer full packing, partial packing, and fragile-only packing options. We can also provide moving boxes, tape, mattress covers, and other supplies before your move day.' },
@@ -108,6 +109,7 @@ function servicePhoto(iconKey) {
     'piano':       'https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=1400&h=900&fit=crop&q=80',
     'warehouse':   'https://images.unsplash.com/photo-1600725935160-f67ee4f6084a?w=1400&h=900&fit=crop&q=80',
     'star':        'https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=1400&h=900&fit=crop&q=80',
+    'cleaning':    'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1400&h=900&fit=crop&q=80',
   }
   return map[iconKey] || 'https://images.unsplash.com/photo-1698917414969-feade59e3343?w=1400&h=900&fit=crop&q=80'
 }
@@ -149,6 +151,12 @@ function serviceHighlights(slug) {
       'Organized pickup and redelivery scheduling support.',
       'Short-term and long-term options for staged relocations.',
       'Useful for renovation, possession gaps, and downsizing.',
+    ],
+    'cleaning-services': [
+      'Move-in and move-out cleans that meet landlord and property standards.',
+      'Deep kitchen and bathroom cleaning with professional-grade products.',
+      'Post-renovation cleanup to remove dust, debris, and residue.',
+      'Eco-friendly, pet-safe products safe for families and children.',
     ],
   }
   return map[slug] || map['local-moving']

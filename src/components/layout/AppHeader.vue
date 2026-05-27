@@ -3,14 +3,14 @@
     <div class="max-w-[1280px] mx-auto px-6 h-full flex items-center gap-6 relative">
 
       <!-- Logo -->
-      <RouterLink to="/" class="flex-shrink-0" aria-label="ManAndTruck Movers — Home">
+        <RouterLink to="/" class="flex-shrink-0" aria-label="ManAndTruck Moving &amp; Cleaning — Home">
         <svg class="h-[52px] w-auto" viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect x="2" y="12" width="30" height="20" rx="2" fill="#1d3557"/>
           <rect x="32" y="18" width="18" height="14" rx="2" fill="#457b9d"/>
           <circle cx="11" cy="34" r="5" fill="#457b9d"/><circle cx="11" cy="34" r="2.5" fill="#fff"/>
           <circle cx="39" cy="34" r="5" fill="#457b9d"/><circle cx="39" cy="34" r="2.5" fill="#fff"/>
           <text x="58" y="30" font-family="Oswald,sans-serif" font-size="17" font-weight="700" fill="#1d3557" letter-spacing="1">MAN &amp; TRUCK</text>
-          <text x="58" y="44" font-family="Open Sans,sans-serif" font-size="10" font-weight="600" fill="#457b9d" letter-spacing="2">MOVERS</text>
+          <text x="58" y="44" font-family="Open Sans,sans-serif" font-size="9" font-weight="600" fill="#457b9d" letter-spacing="1">MOVING &amp; CLEANING</text>
         </svg>
       </RouterLink>
 
@@ -35,9 +35,10 @@
                   <li><RouterLink to="/services/commercial-moving" class="sub-link">Warehouse Moving</RouterLink></li>
                 </ul>
               </li>
-              <li><RouterLink to="/services/packing-services"  class="dd-link">Packing &amp; Unpacking</RouterLink></li>
-              <li><RouterLink to="/services/specialty-items"   class="dd-link">Specialty Items</RouterLink></li>
-              <li><RouterLink to="/services/storage"           class="dd-link">Storage Solutions</RouterLink></li>
+              <li><RouterLink to="/services/packing-services"    class="dd-link">Packing &amp; Unpacking</RouterLink></li>
+              <li><RouterLink to="/services/specialty-items"     class="dd-link">Specialty Items</RouterLink></li>
+              <li><RouterLink to="/services/storage"             class="dd-link">Storage Solutions</RouterLink></li>
+              <li><RouterLink to="/services/cleaning-services"   class="dd-link">Cleaning Services</RouterLink></li>
             </ul>
           </li>
 
@@ -110,6 +111,7 @@
           <li><RouterLink to="/services/packing-services"    @click="closeMobile" class="mob-sub-link">Packing &amp; Unpacking</RouterLink></li>
           <li><RouterLink to="/services/specialty-items"     @click="closeMobile" class="mob-sub-link">Specialty Items</RouterLink></li>
           <li><RouterLink to="/services/storage"             @click="closeMobile" class="mob-sub-link">Storage Solutions</RouterLink></li>
+          <li><RouterLink to="/services/cleaning-services"   @click="closeMobile" class="mob-sub-link">Cleaning Services</RouterLink></li>
         </ul>
       </li>
 

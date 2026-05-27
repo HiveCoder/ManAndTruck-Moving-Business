@@ -9,14 +9,14 @@
       <div class="flex flex-col gap-8">
         <div class="flex flex-col gap-4">
           <p class="inline-block self-start px-4 py-1 bg-accent/20 rounded-full font-heading text-[0.78rem] font-semibold uppercase tracking-[0.15em] text-accent">
-            Trusted Local Movers
+            Moving &amp; Cleaning Experts
           </p>
           <h1 class="font-heading text-5xl md:text-6xl font-bold text-white leading-tight uppercase tracking-wide">
-            Moving Made<br>
-            <span class="text-accent">Simple.</span>
+            Move &amp; Clean<br>
+            <span class="text-accent">Made Simple.</span>
           </h1>
           <p class="text-white/90 text-lg max-w-lg leading-relaxed">
-            Professional, careful, on-time moving services for homes and businesses. Fully dedicated to your peace of mind.
+            Professional moving and cleaning services for homes and businesses. One call covers your entire transition — careful movers and certified cleaners, all under one roof.
           </p>
         </div>
 
@@ -60,6 +60,11 @@
             <label class="flex items-center gap-2 text-sm text-gray-600 cursor-pointer">
               <input v-model="form.include_packing" type="checkbox" class="accent-secondary w-4 h-4" />
               Include packing &amp; unpacking services
+            </label>
+
+            <label class="flex items-center gap-2 text-sm text-gray-600 cursor-pointer">
+              <input v-model="form.include_cleaning" type="checkbox" class="accent-secondary w-4 h-4" />
+              Add move-in / move-out cleaning service
             </label>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -106,14 +111,14 @@ import { sendLeadEmail } from '@/lib/leadInbox.js'
 import { firstBookableWeekend, formatDateInput, isValidMoveDate } from '@/lib/scheduling.js'
 import WeekendDatePicker from '@/components/ui/WeekendDatePicker.vue'
 
-const badges = ['Free Estimates', 'No Hidden Fees', 'On-Time Guaranteed']
+const badges = ['Free Estimates', 'No Hidden Fees', 'On-Time Guaranteed', 'Certified Cleaners']
 
 const postalCodeRegex = /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/
 const minMoveDate = formatDateInput(firstBookableWeekend())
 
 const form = reactive({
   from_zip: '', to_zip: '', move_date: '', no_date: false,
-  include_packing: false, name: '', phone: '', email: '', consent: false,
+  include_packing: false, include_cleaning: false, name: '', phone: '', email: '', consent: false,
 })
 
 const errors    = reactive({})
@@ -203,13 +208,14 @@ async function submitQuote() {
         `To Postal: ${toPostal}`,
         `Move Date: ${moveDate || 'Flexible / not selected'}`,
         `Include Packing: ${form.include_packing ? 'Yes' : 'No'}`,
+        `Include Cleaning: ${form.include_cleaning ? 'Yes' : 'No'}`,
       ],
     })
 
     successMsg.value = emailDelivered
       ? 'Your quote request was received and delivered to our inbox.'
       : 'Quote saved, but email relay is currently unavailable. Please call us at (416) 555-0136.'
-    Object.assign(form, { from_zip: '', to_zip: '', move_date: '', no_date: false, include_packing: false, name: '', phone: '', email: '', consent: false })
+    Object.assign(form, { from_zip: '', to_zip: '', move_date: '', no_date: false, include_packing: false, include_cleaning: false, name: '', phone: '', email: '', consent: false })
     Object.keys(errors).forEach(k => delete errors[k])
   } catch (err) {
     errorMsg.value = 'Something went wrong. Please call us at (416) 555-0136.'

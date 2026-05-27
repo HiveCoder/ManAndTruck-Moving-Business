@@ -3,7 +3,7 @@
     <div class="max-w-[1280px] mx-auto px-6">
       <div class="text-center mb-12">
         <p class="text-sm uppercase tracking-[0.2em] font-heading font-semibold text-secondary mb-2">What We Do</p>
-        <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary uppercase tracking-wide">Our Moving Services</h2>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary uppercase tracking-wide">Our Moving &amp; Cleaning Services</h2>
       </div>
 
       <LoadingSpinner v-if="loading" />
@@ -63,6 +63,7 @@ function servicePhoto(iconKey) {
     'piano':       'https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=600&h=300&fit=crop&q=80',
     'warehouse':   'https://images.unsplash.com/photo-1600725935160-f67ee4f6084a?w=600&h=300&fit=crop&q=80',
     'star':        'https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=600&h=300&fit=crop&q=80',
+    'cleaning':    'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=300&fit=crop&q=80',
   }
   return map[iconKey] || 'https://images.unsplash.com/photo-1698917414969-feade59e3343?w=600&h=300&fit=crop&q=80'
 }

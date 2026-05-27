@@ -58,6 +58,29 @@ BEGIN
 END $$;
 
 ALTER TABLE public.quote_requests ENABLE ROW LEVEL SECURITY;
+
+-- Cleaning-service columns (added with cleaning services feature)
+DO $$
+BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_attribute WHERE attrelid = 'public.quote_requests'::regclass AND attname = 'service_type') THEN
+    ALTER TABLE public.quote_requests ADD COLUMN service_type TEXT NOT NULL DEFAULT 'moving' CHECK (service_type IN ('moving','cleaning','both'));
+  END IF;
+  IF NOT EXISTS (SELECT 1 FROM pg_attribute WHERE attrelid = 'public.quote_requests'::regclass AND attname = 'cleaning_type') THEN
+    ALTER TABLE public.quote_requests ADD COLUMN cleaning_type TEXT;
+  END IF;
+  IF NOT EXISTS (SELECT 1 FROM pg_attribute WHERE attrelid = 'public.quote_requests'::regclass AND attname = 'property_type') THEN
+    ALTER TABLE public.quote_requests ADD COLUMN property_type TEXT;
+  END IF;
+  IF NOT EXISTS (SELECT 1 FROM pg_attribute WHERE attrelid = 'public.quote_requests'::regclass AND attname = 'bedrooms') THEN
+    ALTER TABLE public.quote_requests ADD COLUMN bedrooms TEXT;
+  END IF;
+  IF NOT EXISTS (SELECT 1 FROM pg_attribute WHERE attrelid = 'public.quote_requests'::regclass AND attname = 'bathrooms') THEN
+    ALTER TABLE public.quote_requests ADD COLUMN bathrooms TEXT;
+  END IF;
+  IF NOT EXISTS (SELECT 1 FROM pg_attribute WHERE attrelid = 'public.quote_requests'::regclass AND attname = 'property_zip') THEN
+    ALTER TABLE public.quote_requests ADD COLUMN property_zip TEXT;
+  END IF;
+END $$;
 CREATE POLICY "anon_insert_quote_requests"
   ON public.quote_requests FOR INSERT TO anon WITH CHECK (true);
 

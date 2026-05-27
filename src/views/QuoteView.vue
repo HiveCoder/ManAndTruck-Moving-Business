@@ -47,6 +47,11 @@
               Include full packing &amp; unpacking services
             </label>
 
+            <label class="flex items-center gap-2 text-sm text-gray-600 cursor-pointer">
+              <input v-model="form.include_cleaning" type="checkbox" class="accent-secondary w-4 h-4" />
+              Add move-in / move-out cleaning service
+            </label>
+
             <hr class="border-border" />
             <p class="font-heading font-semibold text-sm text-secondary uppercase tracking-wide">Your Contact Information</p>
 
@@ -134,12 +139,12 @@ import { buildMoveAssistantPlan } from '@/lib/moveAssistant.js'
 import PageHero from '@/components/ui/PageHero.vue'
 import WeekendDatePicker from '@/components/ui/WeekendDatePicker.vue'
 
-onMounted(() => { document.title = 'Get a Free Quote | ManAndTruck Movers' })
+onMounted(() => { document.title = 'Get a Free Quote | ManAndTruck Moving & Cleaning' })
 
 const postalCodeRegex = /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/
 const minMoveDate = formatDateInput(firstBookableWeekend())
 
-const form = reactive({ from_zip: '', to_zip: '', move_date: '', no_date: false, include_packing: false, name: '', phone: '', email: '', consent: false })
+const form = reactive({ from_zip: '', to_zip: '', move_date: '', no_date: false, include_packing: false, include_cleaning: false, name: '', phone: '', email: '', consent: false })
 const errors    = reactive({})
 const errorMsg  = ref('')
 const successMsg = ref('')
@@ -239,6 +244,7 @@ async function submit() {
         `To Postal: ${toPostal}`,
         `Move Date: ${moveDate || 'Flexible / not selected'}`,
         `Include Packing: ${form.include_packing ? 'Yes' : 'No'}`,
+        `Include Cleaning: ${form.include_cleaning ? 'Yes' : 'No'}`,
         '',
         `AI Notes: ${assistantInput.value.trim() || 'None provided'}`,
       ],
@@ -247,7 +253,7 @@ async function submit() {
     successMsg.value = emailDelivered
       ? 'Quote request submitted and delivered to our inbox. We\'ll reach out within 24 hours.'
       : 'Quote saved, but email relay is currently unavailable. Please call us at (416) 555-0136.'
-    Object.assign(form, { from_zip: '', to_zip: '', move_date: '', no_date: false, include_packing: false, name: '', phone: '', email: '', consent: false })
+    Object.assign(form, { from_zip: '', to_zip: '', move_date: '', no_date: false, include_packing: false, include_cleaning: false, name: '', phone: '', email: '', consent: false })
     Object.keys(errors).forEach(k => delete errors[k])
   } catch (err) {
     errorMsg.value = 'Something went wrong. Please call us at (416) 555-0136.'

@@ -2,10 +2,10 @@
   <section class="py-14 bg-cta">
     <div class="max-w-[1280px] mx-auto px-6 text-center flex flex-col items-center gap-6">
       <h2 class="font-heading text-3xl md:text-4xl font-bold text-white uppercase tracking-wide">
-        Ready to Move? Let's Get Started.
+        Ready to Move or Clean? Let's Get Started.
       </h2>
       <p class="text-white/80 text-base max-w-xl">
-        Join thousands of happy customers who trusted ManAndTruck with their move. Get your free quote today — no obligation.
+        Join thousands of happy customers who trusted ManAndTruck with their move and cleaning. Get your free quote today — no obligation.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <RouterLink to="/quote"

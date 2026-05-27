@@ -4,18 +4,18 @@
 
       <!-- Brand -->
       <div class="flex flex-col gap-5">
-        <RouterLink to="/" aria-label="ManAndTruck Movers — Home">
+        <RouterLink to="/" aria-label="ManAndTruck Moving &amp; Cleaning — Home">
           <svg class="h-[50px] w-auto" viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect x="2" y="12" width="30" height="20" rx="2" fill="#fff" opacity=".8"/>
             <rect x="32" y="18" width="18" height="14" rx="2" fill="#a8d8ea" opacity=".65"/>
             <circle cx="11" cy="34" r="5" fill="#a8d8ea"/><circle cx="11" cy="34" r="2.5" fill="#1d3557"/>
             <circle cx="39" cy="34" r="5" fill="#a8d8ea"/><circle cx="39" cy="34" r="2.5" fill="#1d3557"/>
             <text x="58" y="30" font-family="Oswald,sans-serif" font-size="17" font-weight="700" fill="#ffffff" letter-spacing="1">MAN &amp; TRUCK</text>
-            <text x="58" y="44" font-family="Open Sans,sans-serif" font-size="10" font-weight="600" fill="#a8d8ea" letter-spacing="2">MOVERS</text>
+            <text x="58" y="44" font-family="Open Sans,sans-serif" font-size="9" font-weight="600" fill="#a8d8ea" letter-spacing="1">MOVING &amp; CLEANING</text>
           </svg>
         </RouterLink>
         <p class="text-white/80 text-sm leading-relaxed max-w-[260px]">
-          Professional moving services you can trust. Dedicated to a stress-free move.
+          Professional moving and cleaning services you can trust. Dedicated to a stress-free move and a spotless space.
         </p>
         <div class="flex gap-3" aria-label="Social media">
           <a v-for="s in socials" :key="s.label" :href="s.href" :aria-label="s.label" rel="noopener noreferrer"
@@ -57,7 +57,7 @@
           {{ l.label }}
         </RouterLink>
       </nav>
-      <p class="text-[0.78rem] text-white/70">&copy; {{ year }} ManAndTruck Movers. All rights reserved. &nbsp;|&nbsp; Guelph-based, serving cities across Ontario</p>
+      <p class="text-[0.78rem] text-white/70">&copy; {{ year }} ManAndTruck Moving &amp; Cleaning. All rights reserved. &nbsp;|&nbsp; Guelph-based, serving cities across Ontario</p>
     </div>
   </footer>
 </template>
@@ -73,6 +73,7 @@ const links = [
   { to: '/services/commercial-moving', label: 'Commercial' },
   { to: '/services/packing-services', label: 'Packing' },
   { to: '/services/storage',          label: 'Storage' },
+  { to: '/services/cleaning-services', label: 'Cleaning' },
   { to: '/about',                    label: 'About Us' },
   { to: '/locations',                label: 'Locations' },
   { to: '/reviews',                  label: 'Reviews' },

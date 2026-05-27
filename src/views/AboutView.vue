@@ -1,6 +1,6 @@
 <template>
   <main>
-    <PageHero title="About ManAndTruck Movers" subtitle="Guelph-based, Ontario-wide, and passionate about stress-free moving." badge="Our Story"
+    <PageHero title="About ManAndTruck Moving &amp; Cleaning" subtitle="Guelph-based, Ontario-wide, and passionate about stress-free moves and spotless spaces." badge="Our Story"
       :breadcrumbs="[{to:'/',label:'Home'},{label:'About Us'}]" />
 
     <section class="py-20 bg-white">
@@ -10,8 +10,8 @@
           <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary uppercase tracking-wide leading-tight">
             A Group Of Friends Building A Better Moving Experience
           </h2>
-          <p class="text-gray-700 leading-relaxed">ManAndTruck Movers started as a group of friends in Guelph who wanted to run a moving company differently. We saw how stressful moving can be, so we built our service around clear communication, careful handling, and showing up when we say we will.</p>
-          <p class="text-gray-700 leading-relaxed">We are still early in our journey, but our mission is simple: deliver reliable residential and small-business moves across Ontario with the kind of care you would expect from people who genuinely value your trust.</p>
+          <p class="text-gray-700 leading-relaxed">ManAndTruck Moving &amp; Cleaning started as a group of friends in Guelph who wanted to run a moving company differently. We saw how stressful moving can be, so we built our service around clear communication, careful handling, and showing up when we say we will.</p>
+          <p class="text-gray-700 leading-relaxed">We have since expanded to offer professional cleaning services alongside our moves — so one call covers your entire transition. Our mission is simple: deliver reliable residential and small-business moves and cleans across Ontario with the care you would expect from people who genuinely value your trust.</p>
           <div class="grid grid-cols-2 gap-4 mt-2">
             <div v-for="stat in stats" :key="stat.label" class="bg-light-bg rounded-xl p-5 text-center">
               <p class="font-heading font-bold text-3xl text-primary">{{ stat.val }}</p>
@@ -69,7 +69,7 @@ import { onMounted } from 'vue'
 import PageHero from '@/components/ui/PageHero.vue'
 import CtaStrip from '@/components/home/CtaStrip.vue'
 
-onMounted(() => { document.title = 'About Us | ManAndTruck Movers Ontario' })
+onMounted(() => { document.title = 'About Us | ManAndTruck Moving & Cleaning Ontario' })
 
 const stats = [
   { val: '2026', label: 'Founded In' },
