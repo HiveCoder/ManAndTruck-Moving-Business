@@ -21,8 +21,8 @@
         </div>
         <div class="rounded-2xl overflow-hidden aspect-square relative">
           <img
-            src="https://images.unsplash.com/photo-1698917414969-feade59e3343?w=600&h=600&fit=crop&q=80"
-            alt="Founding moving team"
+            src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&h=600&fit=crop&q=80"
+            alt="Our moving and cleaning team"
             class="w-full h-full object-cover"
             loading="lazy"
           />

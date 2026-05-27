@@ -7,11 +7,11 @@
         <RouterLink to="/" aria-label="ManAndTruck Moving &amp; Cleaning — Home">
           <svg class="h-[50px] w-auto" viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect x="2" y="12" width="30" height="20" rx="2" fill="#fff" opacity=".8"/>
-            <rect x="32" y="18" width="18" height="14" rx="2" fill="#a8d8ea" opacity=".65"/>
-            <circle cx="11" cy="34" r="5" fill="#a8d8ea"/><circle cx="11" cy="34" r="2.5" fill="#1d3557"/>
-            <circle cx="39" cy="34" r="5" fill="#a8d8ea"/><circle cx="39" cy="34" r="2.5" fill="#1d3557"/>
+            <rect x="32" y="18" width="18" height="14" rx="2" fill="#94e4da" opacity=".65"/>
+            <circle cx="11" cy="34" r="5" fill="#94e4da"/><circle cx="11" cy="34" r="2.5" fill="#1d3557"/>
+            <circle cx="39" cy="34" r="5" fill="#94e4da"/><circle cx="39" cy="34" r="2.5" fill="#1d3557"/>
             <text x="58" y="30" font-family="Oswald,sans-serif" font-size="17" font-weight="700" fill="#ffffff" letter-spacing="1">MAN &amp; TRUCK</text>
-            <text x="58" y="44" font-family="Open Sans,sans-serif" font-size="9" font-weight="600" fill="#a8d8ea" letter-spacing="1">MOVING &amp; CLEANING</text>
+            <text x="58" y="44" font-family="Open Sans,sans-serif" font-size="9" font-weight="600" fill="#94e4da" letter-spacing="1">MOVING &amp; CLEANING</text>
           </svg>
         </RouterLink>
         <p class="text-white/80 text-sm leading-relaxed max-w-[260px]">

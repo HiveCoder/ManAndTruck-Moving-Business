@@ -90,14 +90,26 @@
         </div>
       </div>
 
-      <!-- Right: moving crew photo -->
-      <div class="hidden lg:block rounded-2xl overflow-hidden shadow-2xl">
-        <img
-          src="https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=800&h=600&fit=crop&q=80"
-          alt="Professional movers at work"
-          class="w-full h-full object-cover"
-          loading="eager"
-        />
+      <!-- Right: moving + cleaning photos -->
+      <div class="hidden lg:grid grid-rows-2 gap-4">
+        <div class="rounded-2xl overflow-hidden shadow-2xl relative">
+          <img
+            src="https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=800&h=320&fit=crop&q=80"
+            alt="Professional movers at work"
+            class="w-full h-full object-cover"
+            loading="eager"
+          />
+          <span class="absolute bottom-3 left-4 px-3 py-1 bg-primary/80 backdrop-blur-sm text-white text-xs font-heading font-bold uppercase tracking-widest rounded-full">Moving Services</span>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-2xl relative">
+          <img
+            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=320&fit=crop&q=80"
+            alt="Professional cleaning crew at work"
+            class="w-full h-full object-cover"
+            loading="eager"
+          />
+          <span class="absolute bottom-3 left-4 px-3 py-1 bg-secondary/90 backdrop-blur-sm text-white text-xs font-heading font-bold uppercase tracking-widest rounded-full">Cleaning Services</span>
+        </div>
       </div>
 
     </div>

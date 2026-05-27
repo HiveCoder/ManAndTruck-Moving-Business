@@ -5,12 +5,12 @@ export default {
     extend: {
       colors: {
         primary: { DEFAULT: '#1d3557', dark: '#122640' },
-        secondary: { DEFAULT: '#457b9d' },
-        accent: '#a8d8ea',
-        'light-bg': '#eaf4f9',
-        'mid-bg': '#dceef8',
+        secondary: { DEFAULT: '#2a9d8f' },
+        accent: '#94e4da',
+        'light-bg': '#edf9f7',
+        'mid-bg': '#c9ede9',
         cta: '#e63946',
-        border: '#d0dce8',
+        border: '#aeddd8',
       },
       fontFamily: {
         heading: ['"Oswald"', 'sans-serif'],
