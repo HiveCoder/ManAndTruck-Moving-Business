@@ -127,11 +127,128 @@
         </div>
       </div>
     </section>
+
+    <!-- ═══════════ QUOTE DOCUMENT ═══════════ -->
+    <section class="pb-20 bg-light-bg print:pb-4">
+      <div class="max-w-[760px] mx-auto px-6">
+        <div id="quote-doc" class="bg-white border border-border rounded-2xl shadow-card-lg overflow-hidden print:shadow-none print:border-gray-300">
+
+          <!-- Header bar -->
+          <div class="bg-gradient-to-r from-primary to-secondary px-8 py-6 flex items-center justify-between">
+            <div>
+              <p class="font-heading font-bold text-white text-xl tracking-wide">MAN &amp; TRUCK</p>
+              <p class="text-accent text-xs font-semibold tracking-widest uppercase">Moving &amp; Cleaning</p>
+            </div>
+            <span class="inline-block bg-white/20 text-white font-heading font-bold text-sm uppercase tracking-widest px-4 py-1.5 rounded-full">Estimate</span>
+          </div>
+
+          <div class="px-8 py-6">
+
+            <!-- Quote meta row -->
+            <div class="flex flex-wrap gap-6 justify-between mb-6 pb-5 border-b border-border text-xs">
+              <div>
+                <p class="text-gray-400 uppercase tracking-wide font-semibold mb-0.5">Quote Ref</p>
+                <p class="font-heading font-bold text-primary text-base">{{ quoteRef }}</p>
+              </div>
+              <div>
+                <p class="text-gray-400 uppercase tracking-wide font-semibold mb-0.5">Date Issued</p>
+                <p class="font-semibold text-gray-700">{{ quoteDate }}</p>
+              </div>
+              <div>
+                <p class="text-gray-400 uppercase tracking-wide font-semibold mb-0.5">Valid For</p>
+                <p class="font-semibold text-gray-700">30 days</p>
+              </div>
+              <div>
+                <p class="text-gray-400 uppercase tracking-wide font-semibold mb-0.5">Move Date</p>
+                <p class="font-semibold text-gray-700">{{ form.no_date ? 'Flexible' : (form.move_date ? formatMoveDate(form.move_date) : '—') }}</p>
+              </div>
+            </div>
+
+            <!-- Bill To / Provider -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6 pb-5 border-b border-border text-xs">
+              <div>
+                <p class="text-gray-400 uppercase tracking-wide font-semibold mb-2">Bill To</p>
+                <p class="font-semibold text-gray-800 text-sm">{{ form.name || '—' }}</p>
+                <p class="text-gray-600">{{ form.email || '—' }}</p>
+                <p class="text-gray-600">{{ form.phone || '—' }}</p>
+              </div>
+              <div>
+                <p class="text-gray-400 uppercase tracking-wide font-semibold mb-2">Service Provider</p>
+                <p class="font-semibold text-gray-800 text-sm">ManAndTruck Moving &amp; Cleaning</p>
+                <p class="text-gray-600">Ontario, Canada</p>
+                <p class="text-gray-600">(416) 555-0136</p>
+              </div>
+            </div>
+
+            <!-- Move route pill -->
+            <div class="flex items-center gap-3 mb-6 px-4 py-3 bg-light-bg rounded-xl text-sm">
+              <span class="font-mono font-bold text-primary text-base">{{ form.from_zip.trim().toUpperCase() || '???' }}</span>
+              <svg class="w-16 h-5 text-secondary flex-shrink-0" viewBox="0 0 64 20" fill="none">
+                <line x1="0" y1="10" x2="54" y2="10" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/>
+                <path d="M52 5 L62 10 L52 15" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="font-mono font-bold text-primary text-base">{{ form.to_zip.trim().toUpperCase() || '???' }}</span>
+              <span class="ml-auto text-xs text-secondary font-semibold bg-secondary/10 px-2 py-0.5 rounded-full">{{ moveTypeLabel }}</span>
+            </div>
+
+            <!-- Services table -->
+            <table class="w-full text-sm mb-6">
+              <thead>
+                <tr class="border-b border-border">
+                  <th class="text-left pb-2 text-xs text-gray-400 uppercase tracking-wide font-semibold">Service</th>
+                  <th class="text-right pb-2 text-xs text-gray-400 uppercase tracking-wide font-semibold">Amount (CAD)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="item in quoteItems" :key="item.description" class="border-b border-border/50">
+                  <td class="py-3 pr-4">
+                    <p class="font-semibold text-gray-800">{{ item.description }}</p>
+                    <p class="text-xs text-gray-500 mt-0.5">{{ item.detail }}</p>
+                  </td>
+                  <td class="py-3 text-right font-semibold text-gray-800 whitespace-nowrap">${{ item.amount.toFixed(2) }}</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Totals -->
+            <div class="flex flex-col items-end gap-1.5 text-sm mb-6">
+              <div class="flex justify-between w-52">
+                <span class="text-gray-500">Subtotal</span>
+                <span class="font-semibold">${{ quoteSubtotal.toFixed(2) }}</span>
+              </div>
+              <div class="flex justify-between w-52">
+                <span class="text-gray-500">HST (13%)</span>
+                <span class="font-semibold">${{ quoteHST.toFixed(2) }}</span>
+              </div>
+              <div class="flex justify-between w-52 pt-2 border-t border-border mt-1">
+                <span class="font-heading font-bold text-primary text-base">Total (CAD)</span>
+                <span class="font-heading font-bold text-primary text-base">${{ quoteTotal.toFixed(2) }}</span>
+              </div>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="bg-light-bg rounded-xl px-5 py-4 text-xs text-gray-500 flex gap-3 items-start mb-6">
+              <svg class="w-4 h-4 text-secondary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <p>This is a preliminary estimate. Final pricing is confirmed upon on-site assessment or detailed inventory review. Additional fees may apply for long carry, stairs, specialty items, or storage.</p>
+            </div>
+
+            <!-- Print button -->
+            <div class="flex justify-end gap-3 print:hidden">
+              <button @click="printQuote" class="flex items-center gap-2 px-5 py-2.5 border border-secondary text-secondary font-heading font-semibold text-xs uppercase tracking-wide rounded-xl hover:bg-secondary/10 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+                Print Estimate
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
 <script setup>
-import { ref, reactive, onMounted } from 'vue'
+import { ref, reactive, computed, onMounted } from 'vue'
 import { supabase } from '@/lib/supabase.js'
 import { sendLeadEmail } from '@/lib/leadInbox.js'
 import { firstBookableWeekend, formatDateInput, isValidMoveDate } from '@/lib/scheduling.js'
@@ -139,7 +256,51 @@ import { buildMoveAssistantPlan } from '@/lib/moveAssistant.js'
 import PageHero from '@/components/ui/PageHero.vue'
 import WeekendDatePicker from '@/components/ui/WeekendDatePicker.vue'
 
-onMounted(() => { document.title = 'Get a Free Quote | ManAndTruck Moving & Cleaning' })
+const quoteRef  = ref('')
+const quoteDate = ref('')
+
+onMounted(() => {
+  document.title = 'Get a Free Quote | ManAndTruck Moving & Cleaning'
+  quoteRef.value  = 'QTE-' + Math.random().toString(36).slice(2, 8).toUpperCase()
+  const now = new Date()
+  quoteDate.value = now.toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })
+})
+
+const isSameRegion = computed(() => {
+  const f = form.from_zip.trim().toUpperCase()
+  const t = form.to_zip.trim().toUpperCase()
+  return f.length > 0 && t.length > 0 && f[0] === t[0]
+})
+
+const moveTypeLabel = computed(() => {
+  const f = form.from_zip.trim()
+  const t = form.to_zip.trim()
+  if (!f || !t) return 'Local Move (est.)'
+  return isSameRegion.value ? 'Local Move' : 'Intercity Move'
+})
+
+const quoteItems = computed(() => {
+  const f = form.from_zip.trim().toUpperCase()
+  const t = form.to_zip.trim().toUpperCase()
+  const baseRate = (f && t && !isSameRegion.value) ? 449 : 299
+  const routeDetail = (f && t) ? `${f} → ${t}` : 'Postal codes pending'
+  const items = [
+    { description: `${moveTypeLabel.value} — 3 movers + 1 truck`, detail: routeDetail, amount: baseRate },
+  ]
+  if (form.include_packing) {
+    items.push({ description: 'Full Packing & Unpacking Service', detail: 'All rooms, materials included', amount: 149 })
+  }
+  if (form.include_cleaning) {
+    items.push({ description: 'Move-In / Move-Out Cleaning', detail: 'Deep clean of full property', amount: 179 })
+  }
+  return items
+})
+
+const quoteSubtotal = computed(() => quoteItems.value.reduce((s, i) => s + i.amount, 0))
+const quoteHST      = computed(() => Math.round(quoteSubtotal.value * 0.13 * 100) / 100)
+const quoteTotal    = computed(() => quoteSubtotal.value + quoteHST.value)
+
+function printQuote() { window.print() }
 
 const postalCodeRegex = /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/
 const minMoveDate = formatDateInput(firstBookableWeekend())
