@@ -4,13 +4,24 @@
 
       <!-- Logo -->
         <RouterLink to="/" class="flex-shrink-0" aria-label="ManAndTruck Moving &amp; Cleaning — Home">
-        <svg class="h-[52px] w-auto" viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect x="2" y="12" width="30" height="20" rx="2" fill="#1d3557"/>
-          <rect x="32" y="18" width="18" height="14" rx="2" fill="#2a9d8f"/>
-          <circle cx="11" cy="34" r="5" fill="#2a9d8f"/><circle cx="11" cy="34" r="2.5" fill="#fff"/>
-          <circle cx="39" cy="34" r="5" fill="#2a9d8f"/><circle cx="39" cy="34" r="2.5" fill="#fff"/>
-          <text x="58" y="30" font-family="Oswald,sans-serif" font-size="17" font-weight="700" fill="#1d3557" letter-spacing="1">MAN &amp; TRUCK</text>
-          <text x="58" y="44" font-family="Open Sans,sans-serif" font-size="9" font-weight="600" fill="#2a9d8f" letter-spacing="1">MOVING &amp; CLEANING</text>
+        <svg class="h-[52px] w-auto" viewBox="0 0 210 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Truck body -->
+          <rect x="2" y="12" width="28" height="20" rx="2" fill="#1d3557"/>
+          <!-- Truck cab -->
+          <rect x="30" y="17" width="16" height="15" rx="2" fill="#2a9d8f"/>
+          <!-- Wheels -->
+          <circle cx="10" cy="34" r="5" fill="#2a9d8f"/><circle cx="10" cy="34" r="2" fill="#fff"/>
+          <circle cx="37" cy="34" r="5" fill="#2a9d8f"/><circle cx="37" cy="34" r="2" fill="#fff"/>
+          <!-- Divider -->
+          <line x1="47" y1="6" x2="47" y2="46" stroke="#d1d5db" stroke-width="1"/>
+          <!-- Cleaning sparkle (4-pointed star) -->
+          <path d="M57 12 L59.3 17.7 L65 20 L59.3 22.3 L57 28 L54.7 22.3 L49 20 L54.7 17.7 Z" fill="#2a9d8f"/>
+          <!-- Small sparkles -->
+          <path d="M63 7 L64 9.5 L66.5 10.5 L64 11.5 L63 14 L62 11.5 L59.5 10.5 L62 9.5 Z" fill="#94e4da"/>
+          <path d="M63 28 L64 30 L66 30.8 L64 31.6 L63 33.6 L62 31.6 L60 30.8 L62 30 Z" fill="#94e4da" opacity=".8"/>
+          <!-- Brand text -->
+          <text x="70" y="28" font-family="Oswald,sans-serif" font-size="16" font-weight="700" fill="#1d3557" letter-spacing="1">MAN &amp; TRUCK</text>
+          <text x="70" y="43" font-family="Open Sans,sans-serif" font-size="9" font-weight="600" fill="#2a9d8f" letter-spacing="1">MOVING &amp; CLEANING</text>
         </svg>
       </RouterLink>
 

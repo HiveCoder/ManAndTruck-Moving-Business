@@ -1,5 +1,5 @@
 <template>
-  <section class="relative overflow-hidden bg-gradient-to-br from-primary to-primary-dark py-20">
+  <section class="relative overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-secondary py-20">
     <div class="max-w-[1280px] mx-auto px-6 relative z-10 text-center text-white">
       <p v-if="badge" class="inline-block mb-3 px-3 py-1 bg-white/15 rounded-full text-xs uppercase tracking-widest font-heading font-semibold text-accent">
         {{ badge }}
